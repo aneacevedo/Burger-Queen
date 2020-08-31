@@ -1,0 +1,15 @@
+[{
+        "id": 0,
+        "img": "",
+        "title": "Pepinillos en Vinagre",
+        "time": "10 min",
+        "price": 300
+    },
+    {
+        "id": 1,
+        "img": "",
+        "title": "Queso",
+        "time": "10 min",
+        "price": 300
+    }
+]

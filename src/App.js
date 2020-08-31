@@ -1,26 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import InitialPage from './Components/initialPage.js';
+import SecondPage  from './Components/secondPage.js';
+import thirdPage from './Components/thirdPage.js';
+import BurgerToggle from './Components/burgerToggle.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    {/* <InitialPage/> */}
+    <SecondPage/>
     </div>
   );
 }
 
-export default App;
+export default App

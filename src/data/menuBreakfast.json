@@ -1,0 +1,36 @@
+[{
+        "id": 0,
+        "img": "",
+        "title": "Café Americano",
+        "time": "15 min",
+        "price": 900
+    },
+    {
+        "id": 1,
+        "img": "",
+        "title": "Café Cortado",
+        "time": "15 min",
+        "price": 900
+    },
+    {
+        "id": 2,
+        "img": "",
+        "title": "Té",
+        "time": "15 min",
+        "price": 900
+    },
+    {
+        "id": 3,
+        "img": "",
+        "title": "Jugo de frutas Natural",
+        "time": "15 min",
+        "price": 1100
+    },
+    {
+        "id": 4,
+        "img": "",
+        "title": "Aliado Queso Jamon",
+        "time": "15 min",
+        "price": 1500
+    }
+]

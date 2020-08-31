@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Primera pantalla */
+
+.initialPageBackground {
+    background: url('./media/PixarUp.jpg');
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.initialPageCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgb(255, 255, 255, 0.75);
+    width: 100%;
+    height: 350px;
+    margin-top: 24vh;
+    font-size: 44px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.initialPageContent,
+.secondPageContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    color: #204890;
 }
 
-.App-link {
-  color: #61dafb;
+.btnContent {
+    display: flex;
+    flex-flow: row nowrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btnInitialPage,
+.btnSecondPage {
+    margin: 60px;
+    width: 340px;
+    height: 65px;
+    font-size: 38px;
+    color: white;
+    background: rgb(0, 170, 223);
+    background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%);
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* Segunda página */
+
+.secondPageBackground {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    align-items: center;
+    background: url('./media/ratatouille.png') no-repeat;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aside {
+    left: 1vw;
+    top: 1vw;
+}
+
+#contentToggle {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.toggle {
+    text-align: center;
+    color: #00AADF;
+    font-size: 3vw;
+    background-color: white;
+    border: 2px solid #00AADF;
+    border-radius: 3px;
+    color: #00AADF;
+    width: 4.5vw;
+    height: 6vh;
+    padding-bottom: 1.5vw;
+}
+
+.secondPageContent {
+    flex-flow: column wrap;
+    text-align: center;
+    width: 40vw;
+    height: 40vh;
+    margin-top: 10vw;
+    margin-bottom: 30vw;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    background-color: rgba(255, 255, 255, 0.83);
+    font-size: 20px;
+    color: #00AADF;
+}
+
+.selectNames {
+    background-color: #00AADF;
+    border: none;
+    margin: 40px;
+    width: 225px;
+    font-size: 16px;
+    padding: 2px;
+}
+
+.btnSecondPage {
+    width: 200px;
+    font-size: 14px;
+    height: 30px;
+}
+
+
+/* Tercera Página */
+
+.thirdPageBackground {
+    background: url('./media/castillo.png') no-repeat;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
 }
