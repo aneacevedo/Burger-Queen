@@ -1,29 +1,36 @@
 import React, { Component } from 'react';
-import InitialPage from './initialPage.js';
+// import InitialPage from './initialPage.js';
+//import PropTypes from 'prop-types';
+import AsideToggle from './asideToggle.js';
 
-const activeToggle = () => document.querySelector('#contentToggle').classList.toggle('active');
-function BurgerToggle() {
-    return ( 
-        <div className='sideBar'>
-            <div id="contentToggle" onClick={activeToggle}>
+
+class BurgerToggle extends Component {
+    state = {
+        burgerMenuVisible:false
+    }
+    openBurgerMenu = () => {
+        console.log("escucho");
+        this.setState({burgerMenuVisible:true})
+
+    }
+    closeBurgerMenu = ()=> {
+        console.log("me cierro");
+        this.setState({burgerMenuVisible:false})}
+
+    render() {  
+         
+        return ( 
+        <AsideToggle>
+            <div onClick={this.openBurgerMenu}>
                 <p className="toggle">&#9776;</p>
-            </div>
-{/* ingresar componente thirdPage */}
-          <div>
-              <p>Mesas</p>
-          </div>
-
-          <div>
-              <p>Pedidos</p>
-          </div>
-{/* ingresar componente initialpage */}
-          <div onClick={InitialPage}> 
-              <p>Cambiar cuenta</p>
-          </div>
-            
-         </div>
-    );
+           </div>
+        </AsideToggle>
+        
+        
+        )
+    }
 }
+
 
 export default BurgerToggle;
 
