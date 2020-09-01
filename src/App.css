@@ -54,11 +54,7 @@
 
 
 /* Segunda página */
-
 .secondPageBackground {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
     align-items: center;
     background: url('./media/ratatouille.png') no-repeat;
     position: fixed;
@@ -128,4 +124,47 @@
     position: fixed;
     height: 100vh;
     width: 100vw;
+    /* overflow: hidden; */
 }
+
+.title{
+    margin-top: -30px;
+    text-align: center;
+    color: #48387D;
+   
+}
+.contentTables{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-left: 170px;
+}
+.tableStyle{
+    background: #00AADF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    width: 225px;
+    height: 200px;
+    margin:80px 200px 0px 0px;
+    color:white;
+    text-align: center;
+    font-size:30px;
+    line-height: 56px;
+}
+
+/* sidebar */
+/* .sideBar{
+
+    width: 180px;
+    height:100%;
+    background: rgb(0, 170, 223);
+    background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%);
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #FFFFFF;
+    left:-500px;
+} 
+.sideBar.active{
+    left: 0px;
+} */
