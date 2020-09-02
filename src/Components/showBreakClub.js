@@ -17,12 +17,12 @@ class ShowBreakClub extends React.Component{
         return ( 
                 <div className='showFoodBreakfast'>
                     <div className="containerFood">
-                        { this.props.dataBreakfast.map(menus =>
+                        {/* { this.props.dataBreakfast.map(menus =>
                         <p> 
                            title={menus.title}
                        
                         </p>
-                         )}
+                         )} */}
                         <div className='containerImgFood'>imagen
                         </div>
                     </div>

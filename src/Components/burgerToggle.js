@@ -1,32 +1,61 @@
 import React, { Component } from 'react';
 // import InitialPage from './initialPage.js';
 //import PropTypes from 'prop-types';
-import AsideToggle from './asideToggle.js';
-
 
 class BurgerToggle extends Component {
-    state = {
-        burgerMenuVisible:false
+    constructor() {
+        super();
+        this.state = {
+            showMenu: false,
+        }
+        this.showMenu = this.showMenu.bind(this);
+        this.closeMenu = this.closeMenu.bind(this);
     }
-    openBurgerMenu = () => {
-        console.log("escucho");
-        this.setState({burgerMenuVisible:true})
+    showMenu(e){
+        e.preventDefault();
 
+        this.setState({ showMenu : true}, () =>{
+            document.addEventListener('click', this.closeMenu); 
+        });
     }
-    closeBurgerMenu = ()=> {
-        console.log("me cierro");
-        this.setState({burgerMenuVisible:false})}
+
+    closeMenu (e){
+      if(!this.dropdownMenu.contains(e.target)){
+        this.setState({showMenu: false}, () =>{
+            document.removeEventListener('click', this.closeMenu);
+        });
+    }
+}
+
 
     render() {  
          
         return ( 
-        <AsideToggle>
-            <div onClick={this.openBurgerMenu}>
-                <p className="toggle">&#9776;</p>
+            <div className='sideBar'
+            ref={(element)=> {
+                this.dropdownMenu = element;
+            }}>
+                <div id='contentToggle'>
+                    <button className="toggle" onClick = {this.showMenu}>
+                        &#9776;
+                    </button>
+                    
+                </div>
+                {
+                this.state.showMenu
+                ? (
+
+               <div key="asideView" display="none">
+                 <button> Mesas</button>
+                 <button type='button'> Pedidos</button>
+                 <button type='button'>Cambiar cuenta</button>
+               </div>
+                )
+                : (
+                    null
+                )
+                }
            </div>
-        </AsideToggle>
-        
-        
         )
     }
 }

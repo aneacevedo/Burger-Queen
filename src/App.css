@@ -7,10 +7,9 @@
 /* Primera pantalla */
 
 .initialPageBackground {
-    background: url('./media/PixarUp.jpg');
+    background: url('./media/backUp.png');
     position: fixed;
-    height: 100vh;
-    width: 100vw;
+    background-size: cover;
 }
 
 .initialPageCard {
@@ -19,10 +18,9 @@
     align-items: center;
     text-align: center;
     background: rgb(255, 255, 255, 0.75);
-    width: 100%;
-    height: 350px;
-    margin-top: 24vh;
-    font-size: 44px;
+    width: 100vw;
+    height: 50vh;
+    margin-top: 30vh;
 }
 
 .initialPageContent,
@@ -32,6 +30,7 @@
     align-items: center;
     flex-flow: column nowrap;
     color: #204890;
+    font-size: 54px;
 }
 
 .btnContent {
@@ -41,10 +40,10 @@
 
 .btnInitialPage,
 .btnSecondPage {
-    margin: 60px;
-    width: 340px;
-    height: 65px;
-    font-size: 38px;
+    margin: 50px;
+    width: 150px;
+    height: 55px;
+    font-size: 40px;
     color: white;
     background: rgb(0, 170, 223);
     background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%);
@@ -65,14 +64,9 @@
     background-size: cover;
 }
 
-.aside {
-    left: 1vw;
-    top: 1vw;
-}
-
 #contentToggle {
-    margin-top: 20px;
-    margin-left: 30px;
+    margin-top: 40px;
+    margin-left: 45px;
 }
 
 .toggle {
@@ -83,22 +77,22 @@
     border: 2px solid #00AADF;
     border-radius: 3px;
     color: #00AADF;
-    width: 4.5vw;
-    height: 6vh;
-    padding-bottom: 1.5vw;
+    width: 5.5vw;
+    height: 7vh;
+    padding-bottom: 2vw;
 }
 
 .secondPageContent {
     flex-flow: column wrap;
     text-align: center;
-    width: 40vw;
-    height: 40vh;
-    margin-top: 10vw;
-    margin-bottom: 30vw;
-    margin-left: 30vw;
-    margin-right: 30vw;
+    width: 50vw;
+    height: 50vh;
+    margin-top: 20vw;
+    margin-bottom: 40vw;
+    margin-left: 40vw;
+    margin-right: 40vw;
     background-color: rgba(255, 255, 255, 0.83);
-    font-size: 20px;
+    font-size: 50px;
     color: #00AADF;
 }
 
@@ -172,17 +166,115 @@
 
 /* sidebar */
 
-
-/* 
 .sideBar {
-    display: none;
+    display: flex;
     width: 180px;
     height: 100%;
-    background: rgb(0, 170, 223);
-    background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%);
+    /* background: rgb(0, 170, 223);
+    background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%); */
     font-size: 36px;
     line-height: 42px;
     text-align: center;
     color: #FFFFFF;
-    left: 500px;
-} */
+}
+
+@media screen and (min-width:1025px) {
+    /* Primera pantalla */
+    .initialPageBackground {
+        height: 100vh;
+        width: 100vw;
+    }
+    .initialPageCard {
+        width: 100%;
+        height: 350px;
+        margin-top: 24vh;
+        font-size: 44px;
+    }
+    .btnInitialPage,
+    .btnSecondPage {
+        margin: 60px;
+        width: 340px;
+        height: 65px;
+        font-size: 38px;
+        border-radius: 5px;
+    }
+    /* Segunda página */
+    .secondPageBackground {
+        height: 100vh;
+        width: 100vw;
+    }
+    .aside {
+        left: 1vw;
+        top: 1vw;
+    }
+    #contentToggle {
+        margin-top: 30px;
+        margin-left: 35px;
+    }
+    .toggle {
+        font-size: 3vw;
+        border-radius: 3px;
+        width: 4.5vw;
+        height: 6vh;
+        padding-bottom: 1.5vw;
+    }
+    .secondPageContent {
+        width: 40vw;
+        height: 40vh;
+        margin-top: 10vw;
+        margin-bottom: 30vw;
+        margin-left: 30vw;
+        margin-right: 30vw;
+        font-size: 20px;
+    }
+    .selectNames {
+        margin: 40px;
+        width: 225px;
+        font-size: 16px;
+        padding: 2px;
+    }
+    .btnSecondPage {
+        width: 200px;
+        font-size: 14px;
+        height: 30px;
+    }
+    /* Tercera Página */
+    .thirdPageBackground {
+        height: 100vh;
+        width: 100vw;
+        /* overflow: hidden; */
+    }
+    .title {
+        margin-top: 10px;
+    }
+    .contentTables {
+        margin-left: 170px;
+    }
+    .tableStyle {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        width: 225px;
+        height: 200px;
+        margin: 80px 200px 0px 0px;
+        font-size: 30px;
+        line-height: 56px;
+    }
+    /* Menú */
+    .nameComensal {
+        font-size: 14px;
+    }
+    .tMenu {
+        width: 200px;
+        height: 30px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    /* sidebar */
+    .sideBar {
+        width: 180px;
+        height: 100%;
+        /* background: rgb(0, 170, 223);
+    background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%); */
+        font-size: 36px;
+        line-height: 42px;
+    }
+}
