@@ -10,6 +10,7 @@
     background: url('./media/backUp.png');
     position: fixed;
     background-size: cover;
+    height: 100vh;
 }
 
 .initialPageCard {
@@ -23,14 +24,13 @@
     margin-top: 30vh;
 }
 
-.initialPageContent,
-.secondPageContent {
+.initialPageContent {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
     color: #204890;
-    font-size: 54px;
+    font-size: 3rem;
 }
 
 .btnContent {
@@ -41,14 +41,17 @@
 .btnInitialPage,
 .btnSecondPage {
     margin: 50px;
-    width: 150px;
-    height: 55px;
-    font-size: 40px;
+    width: 220px;
+    height: 70px;
+    font-size: 2.8rem;
     color: white;
     background: rgb(0, 170, 223);
     background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%);
     border: none;
     border-radius: 5px;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
 }
 
 
@@ -60,13 +63,40 @@
     position: fixed;
     height: 100vh;
     width: 100vw;
-    background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+}
+
+.containerAside {
+    width: 30vw;
+    height: 100vh;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vw;
+}
+
+.toggleContainer {
+    margin-top: 2vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+.sidebar {
+    font-size: 4rem;
+    background: rgb(0, 170, 223);
+    background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%);
+    text-align: center;
+    color: #FFFFFF;
+    flex-direction: column;
 }
 
 #contentToggle {
-    margin-top: 40px;
-    margin-left: 45px;
+    margin-top: 5vw;
+    font-size: 4rem;
+    line-height: 42px;
+    text-align: center;
+    color: #FFFFFF;
 }
 
 .toggle {
@@ -80,11 +110,14 @@
     width: 5.5vw;
     height: 7vh;
     padding-bottom: 2vw;
+    cursor: pointer;
 }
 
 .secondPageContent {
-    flex-flow: column wrap;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-content: center;
     width: 50vw;
     height: 50vh;
     margin-top: 20vw;
@@ -94,32 +127,33 @@
     background-color: rgba(255, 255, 255, 0.83);
     font-size: 50px;
     color: #00AADF;
+    z-index: 5;
 }
 
 .selectNames {
-    background-color: #00AADF;
-    border: none;
+    /* background-color: #00AADF; */
+    border: 2px solid #00AADF;
     margin: 40px;
     width: 225px;
-    font-size: 16px;
+    font-size: 28px;
     padding: 2px;
 }
 
 .btnSecondPage {
     width: 200px;
-    font-size: 14px;
-    height: 30px;
+    font-size: 32px;
+    height: 65px;
 }
 
 
 /* Tercera Página */
 
 .thirdPageBackground {
+    align-items: center;
     background: url('./media/castillo.png') no-repeat;
-    position: fixed;
     height: 100vh;
     width: 100vw;
-    /* overflow: hidden; */
+    display: flex;
 }
 
 .title {
@@ -178,35 +212,17 @@
     color: #FFFFFF;
 }
 
-@media screen and (min-width:1025px) {
+@media screen and (max-width:1366px) and (orientation: portrait) {
     /* Primera pantalla */
-    .initialPageBackground {
-        height: 100vh;
-        width: 100vw;
-    }
     .initialPageCard {
-        width: 100%;
-        height: 350px;
-        margin-top: 24vh;
-        font-size: 44px;
-    }
-    .btnInitialPage,
-    .btnSecondPage {
-        margin: 60px;
-        width: 340px;
-        height: 65px;
-        font-size: 38px;
-        border-radius: 5px;
+        margin-top: 35vw;
+        height: 43vh;
     }
     /* Segunda página */
-    .secondPageBackground {
-        height: 100vh;
-        width: 100vw;
-    }
-    .aside {
+    /* .aside {
         left: 1vw;
         top: 1vw;
-    }
+    } */
     #contentToggle {
         margin-top: 30px;
         margin-left: 35px;
@@ -219,31 +235,26 @@
         padding-bottom: 1.5vw;
     }
     .secondPageContent {
-        width: 40vw;
+        width: 60vw;
         height: 40vh;
         margin-top: 10vw;
         margin-bottom: 30vw;
-        margin-left: 30vw;
+        margin-left: 20vw;
         margin-right: 30vw;
-        font-size: 20px;
+        font-size: 30px;
     }
     .selectNames {
         margin: 40px;
         width: 225px;
-        font-size: 16px;
-        padding: 2px;
+        font-size: 22px;
+        padding: 6px;
     }
     .btnSecondPage {
         width: 200px;
-        font-size: 14px;
-        height: 30px;
+        font-size: 24px;
+        height: 50px;
     }
     /* Tercera Página */
-    .thirdPageBackground {
-        height: 100vh;
-        width: 100vw;
-        /* overflow: hidden; */
-    }
     .title {
         margin-top: 10px;
     }
