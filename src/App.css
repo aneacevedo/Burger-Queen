@@ -21,7 +21,7 @@
     background: rgb(255, 255, 255, 0.75);
     width: 100vw;
     height: 50vh;
-    margin-top: 30vh;
+    margin-top: 25vh;
 }
 
 .initialPageContent {
@@ -30,7 +30,7 @@
     align-items: center;
     flex-flow: column nowrap;
     color: #204890;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .btnContent {
@@ -38,17 +38,16 @@
     flex-flow: row nowrap;
 }
 
-.btnInitialPage,
-.btnSecondPage {
+.btnInitialPage {
     margin: 50px;
     width: 220px;
     height: 70px;
-    font-size: 2.8rem;
+    font-size: 2rem;
     color: white;
     background: rgb(0, 170, 223);
     background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%);
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 2px;
     text-align: center;
     cursor: pointer;
@@ -68,50 +67,14 @@
 }
 
 .containerAside {
-    width: 30vw;
+    width: 20vw;
     height: 100vh;
     z-index: 5;
     display: flex;
     flex-direction: column;
-    margin-top: 10vw;
+    border: none;   
 }
 
-.toggleContainer {
-    margin-top: 2vw;
-    margin-left: 3vw;
-    margin-right: 3vw;
-}
-
-.sidebar {
-    font-size: 4rem;
-    background: rgb(0, 170, 223);
-    background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%);
-    text-align: center;
-    color: #FFFFFF;
-    flex-direction: column;
-}
-
-#contentToggle {
-    margin-top: 5vw;
-    font-size: 4rem;
-    line-height: 42px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-.toggle {
-    text-align: center;
-    color: #00AADF;
-    font-size: 3vw;
-    background-color: white;
-    border: 2px solid #00AADF;
-    border-radius: 3px;
-    color: #00AADF;
-    width: 5.5vw;
-    height: 7vh;
-    padding-bottom: 2vw;
-    cursor: pointer;
-}
 
 .secondPageContent {
     display: flex;
@@ -120,66 +83,85 @@
     align-content: center;
     width: 50vw;
     height: 50vh;
-    margin-top: 20vw;
-    margin-bottom: 40vw;
-    margin-left: 40vw;
-    margin-right: 40vw;
+    margin-top: 25vh;
+    margin-bottom: 25vh;
+    margin-left: 5vw;
+    margin-right: 15vw;
     background-color: rgba(255, 255, 255, 0.83);
-    font-size: 50px;
+    font-size: 2.5rem;
     color: #00AADF;
     z-index: 5;
+    justify-content: center;
 }
 
 .selectNames {
-    /* background-color: #00AADF; */
+    background-color: #00AADF;
     border: 2px solid #00AADF;
-    margin: 40px;
-    width: 225px;
-    font-size: 28px;
+    margin-left: 25%;
+    width: 50%;
+    font-size: 1.5rem;
     padding: 2px;
+    text-align: center;
+    margin-top: 10%;
+    color: white;
+    margin-bottom: 2%;
 }
 
 .btnSecondPage {
-    width: 200px;
-    font-size: 32px;
-    height: 65px;
+    align-self: center;
+    margin-top: 50px;
+    width: 220px;
+    height: 50px;
+    font-size: 1.8rem;
+    color: white;
+    background: rgb(0, 170, 223);
+    background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
 }
 
 
 /* Tercera Página */
 
 .thirdPageBackground {
-    align-items: center;
+  
     background: url('./media/castillo.png') no-repeat;
-    height: 100vh;
-    width: 100vw;
+    background-size: cover;
     display: flex;
+  
 }
 
 .title {
-    margin-top: 10px;
+    margin-top: 10vh;
     text-align: center;
     color: #48387D;
 }
 
 .contentTables {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
+    margin-top: 10vh;
     justify-content: center;
-    margin-left: 170px;
+    margin-right: 10vw;
+  
 }
 
 .tableStyle {
     background: #00AADF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    width: 225px;
-    height: 200px;
-    margin: 80px 200px 0px 0px;
+    width: 20vw;
+    height: 15vh;
+    margin: 30px 30px 30px 30px;
     color: white;
     text-align: center;
-    font-size: 30px;
-    line-height: 56px;
+    font-size: 1.5rem;
+    line-height: 15vh;
+   
+    
 }
 
 
@@ -199,77 +181,56 @@
 
 
 /* sidebar */
-
 .sideBar {
-    display: flex;
-    width: 180px;
-    height: 100%;
-    /* background: rgb(0, 170, 223);
-    background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%); */
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 4rem;
+    /* background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%); */
     text-align: center;
     color: #FFFFFF;
+    flex-direction: column;
 }
-
-@media screen and (max-width:1366px) and (orientation: portrait) {
+#contentToggle{
+    margin-bottom: 15vh;
+}
+.boxMenuToggle{
+    background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%);
+    width: 20vw;
+    height: 100vh;
+    z-index: 5;
+}
+.itemMenu{
+    width: 100%;
+    height: 15vh;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%);
+    color: #FFFFFF;
+    border-style: none;
+    border-bottom: 1px solid rgba(67, 56, 125, 1) 100% ;
+     
+    font-size: 2vw;
+}
+.toggle {
+    text-align: center;
+    font-size: 40px;
+    background-color: white;
+    border: 2px solid #00AADF;
+    border-radius: 5px;
+    color: #00AADF;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    padding-bottom: 0.5vw;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 3vw;
+    margin-top: 2vh;
+}
+@media screen and (max-width:1024px), handheld and (orientation: portrait) {
     /* Primera pantalla */
-    .initialPageCard {
-        margin-top: 35vw;
-        height: 43vh;
-    }
+  
     /* Segunda página */
-    /* .aside {
-        left: 1vw;
-        top: 1vw;
-    } */
-    #contentToggle {
-        margin-top: 30px;
-        margin-left: 35px;
-    }
-    .toggle {
-        font-size: 3vw;
-        border-radius: 3px;
-        width: 4.5vw;
-        height: 6vh;
-        padding-bottom: 1.5vw;
-    }
-    .secondPageContent {
-        width: 60vw;
-        height: 40vh;
-        margin-top: 10vw;
-        margin-bottom: 30vw;
-        margin-left: 20vw;
-        margin-right: 30vw;
-        font-size: 30px;
-    }
-    .selectNames {
-        margin: 40px;
-        width: 225px;
-        font-size: 22px;
-        padding: 6px;
-    }
-    .btnSecondPage {
-        width: 200px;
-        font-size: 24px;
-        height: 50px;
-    }
+
     /* Tercera Página */
-    .title {
-        margin-top: 10px;
-    }
-    .contentTables {
-        margin-left: 170px;
-    }
-    .tableStyle {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 5px;
-        width: 225px;
-        height: 200px;
-        margin: 80px 200px 0px 0px;
-        font-size: 30px;
-        line-height: 56px;
-    }
+   
     /* Menú */
     .nameComensal {
         font-size: 14px;
@@ -280,12 +241,5 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     /* sidebar */
-    .sideBar {
-        width: 180px;
-        height: 100%;
-        /* background: rgb(0, 170, 223);
-    background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%); */
-        font-size: 36px;
-        line-height: 42px;
-    }
+  
 }

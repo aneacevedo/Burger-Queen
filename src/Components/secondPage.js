@@ -16,10 +16,11 @@ class SecondPage extends React.Component {
                 <div className='secondPageContent'>
                     <p>Selecciona tu nombre en la lista:</p>
                     <select className='selectNames' name='waiters'>
-                    <option value disabled selected>Seleccione</option>
-                        <option value='value1'>Diego</option>
-                        <option value='value2'>Pedro</option>
-                        <option value='value3'>Juan</option>
+                        <option value disabled selected>Seleccione</option>
+                        <option value='0'>Diego</option>
+                        <option value='1'>Pedro</option>
+                        <option value='2'>Juan</option>
+                     
                     </select>
                     <button className='btnSecondPage'>Ingresar</button>
                 </div>   
