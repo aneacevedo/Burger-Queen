@@ -37,7 +37,7 @@ class BurgerToggle extends Component {
             }}>
                 <div id='contentToggle'>
                     <button className="toggle" onClick = {this.showMenu}>
-                        &#9776;
+                    &#9776;
                     </button>
                     
                 </div>
@@ -45,11 +45,12 @@ class BurgerToggle extends Component {
                 this.state.showMenu
                 ? (
 
-               <div key="asideView" display="none">
-                 <button> Mesas</button>
-                 <button type='button'> Pedidos</button>
-                 <button type='button'>Cambiar cuenta</button>
+               <div className="containerAside" key="asideView" display="none"  >
+                 <button className="itemMenu" type='button'> Mesas</button>
+                 <button className="itemMenu" type='button'> Pedidos</button>
+                 <button className="itemMenu"type='button'>Cambiar cuenta</button>
                </div>
+
                 )
                 : (
                     null
