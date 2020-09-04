@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 class showMenu extends Component {
     styleCompleted(){
         return {
-            fontSize:'vw',
-            color: this.props.task.done ? 'pink' : 'blue',
+            fontSize:'2vw',
+            color:'blue',
             textDecoration:'none',
             border: this.props.task.done ?'2px solid red':'1px solid grey',
             padding: '10px 15px',

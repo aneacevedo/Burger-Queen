@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../index.css';
 import BurgerToggle from './burgerToggle.js';
-
+import {withRouter} from 'react-router-dom';
+import data from '../data/waiters.json';
 
 class SecondPage extends React.Component {
+    nextPath(path) {
+        this.props.history.push(path);
+      }
+    const [waiters, setwaiters] = useState();
     render(){
-        return ( 
+            return ( 
             <div className = "secondPageBackground">
              <div className="containerAside">
              <div className="toggleContainer">
@@ -14,19 +19,19 @@ class SecondPage extends React.Component {
              </div>
                
                 <div className='secondPageContent'>
-                    <p>Selecciona tu nombre en la lista:</p>
-                    <select className='selectNames' name='waiters'>
-                    <option value disabled selected>Seleccione</option>
-                        <option value='value1'>Diego</option>
-                        <option value='value2'>Pedro</option>
-                        <option value='value3'>Juan</option>
-                    </select>
-                    <button className='btnSecondPage'>Ingresar</button>
+                    <div key={data[waiters].id}>
+                        <p>Selecciona tu nombre en la lista:</p>
+                        <select defaultValue={'DEFAULT'} className='selectNames' name='waiters' key={waiters.id} >
+                            <option value='DEFAULT' disabled>Seleccione</option>
+                            <option value='0' >{data[waiters].name}</option>
+                           
+                        </select>
+                    </div> 
+                    <button className='btnSecondPage'  onClick={() => this.nextPath('/thirdPage')}>Ingresar</button>
                 </div>   
             </div>
-            );
+        );
     }
-    
 }
 
-export default SecondPage;
+export default withRouter(SecondPage);

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import InitialPage from './initialPage.js';
 //import PropTypes from 'prop-types';
+import {withRouter} from 'react-router-dom';
 
 class BurgerToggle extends Component {
     constructor() {
@@ -19,15 +20,18 @@ class BurgerToggle extends Component {
         });
     }
 
-    closeMenu (e){
-      if(!this.dropdownMenu.contains(e.target)){
-        this.setState({showMenu: false}, () =>{
+    closeMenu(event) {
+        if (!event.target.closest('.menu')) {
+          
+          this.setState({ showMenu: false }, () => {
             document.removeEventListener('click', this.closeMenu);
-        });
-    }
-}
-
-
+          });  
+          
+        }
+      }
+nextPath(path) {
+    this.props.history.push(path);
+  }
     render() {  
          
         return ( 
@@ -37,7 +41,7 @@ class BurgerToggle extends Component {
             }}>
                 <div id='contentToggle'>
                     <button className="toggle" onClick = {this.showMenu}>
-                        &#9776;
+                    &#9776;
                     </button>
                     
                 </div>
@@ -45,11 +49,12 @@ class BurgerToggle extends Component {
                 this.state.showMenu
                 ? (
 
-               <div key="asideView" display="none">
-                 <button className="menuItem" type='button'> Mesas</button>
-                 <button className="menuItem"type='button'> Pedidos</button>
-                 <button className="menuItem"type='button'>Cambiar cuenta</button>
+               <div className="containerAside" key="asideView" display="none"  >
+                 <button className="itemMenu" type='button' onClick={() => this.nextPath('/thirdPage')}> Mesas </button>
+                 <button className="itemMenu" type='button' onClick={() => this.nextPath('/')}> Pedidos</button>
+                 <button className="itemMenu" type='button' onClick={() => this.nextPath('/')}>Cambiar cuenta</button>
                </div>
+
                 )
                 : (
                     null
@@ -61,5 +66,5 @@ class BurgerToggle extends Component {
 }
 
 
-export default BurgerToggle;
+export default withRouter(BurgerToggle);
 

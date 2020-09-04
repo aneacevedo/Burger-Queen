@@ -4,7 +4,7 @@ import './App.css';
 import InitialPage from './Components/initialPage.js';
 import SecondPage  from './Components/secondPage.js';
 import ThirdPage from './Components/thirdPage.js';
-// import MenuPage from './Components/menu.js';
+import MenuPage from './Components/menu.js';
 
 class App extends React.Component{
   render(){
@@ -25,6 +25,10 @@ class App extends React.Component{
           exact
           path="/thirdPage"
           render={ () => <ThirdPage/>} />
+           <Route
+          exact
+          path="/menu"
+          render={ () => <MenuPage/>}/>
         </Switch>
       </div>
    </BrowserRouter>

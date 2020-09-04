@@ -7,25 +7,23 @@ import data from '../data/menuBreakfast.json';
 //         <p>ayuda</p>)
 // }
 
-const dataBreakfast = data;
-console.log (dataBreakfast);
+const dataBreakfast = data.map(food =>
+    <div className="containerFood">
+        <p>{food.title}</p>
+        <div className='containerImgFood'>
+            <img className='imgFood' 
+            src={food.img}/>
+        </div>
+    </div>
+);
 
-  
+
 class ShowBreakClub extends React.Component{
     render(){
         
         return ( 
                 <div className='showFoodBreakfast'>
-                    <div className="containerFood">
-                        {/* { this.props.dataBreakfast.map(menus =>
-                        <p> 
-                           title={menus.title}
-                       
-                        </p>
-                         )} */}
-                        <div className='containerImgFood'>imagen
-                        </div>
-                    </div>
+                 {dataBreakfast}
                  </div>
                 );
     }

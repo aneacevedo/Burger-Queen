@@ -1,14 +1,15 @@
 import React,{Component} from 'react';
-import showMenu from './showMenu';
+// import showMenu from './showMenu';
+import menuLunch from './menuLunch.json'
 
 
 class  ShowMenuTradi extends Component {
     render() {
-        return this.props.showMenusTradi.map(menu => 
+        return this.props.menuLunch.map(menu => 
         <showMenu
-        name={showMenu.title} 
-        key = {showMenu.id}
-        price ={showMenu.price}
+        name={menu.title} 
+        key = {menu.id}
+        price ={menu.price}
         />);
     }
 }
