@@ -46,9 +46,9 @@ class BurgerToggle extends Component {
                 ? (
 
                <div key="asideView" display="none">
-                 <button> Mesas</button>
-                 <button type='button'> Pedidos</button>
-                 <button type='button'>Cambiar cuenta</button>
+                 <button className="menuItem" type='button'> Mesas</button>
+                 <button className="menuItem"type='button'> Pedidos</button>
+                 <button className="menuItem"type='button'>Cambiar cuenta</button>
                </div>
                 )
                 : (
