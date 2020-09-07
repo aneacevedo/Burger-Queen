@@ -11,7 +11,7 @@ const dataBreakfast = data.map(food =>
     <div className="containerFood">
         <p>{food.title}</p>
         <div className='containerImgFood'>
-            <img className='imgFood' 
+            //<img className='imgFood' 
             src={food.img}/>
         </div>
     </div>

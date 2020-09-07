@@ -1,13 +1,28 @@
 import React from 'react';
-// import ShowBreakClub from './showBreakClub.js';
+//import ShowBreakClub from './showBreakClub.js';
+import MenuLunch  from './showMenusTradi.js';
 
 
-// const showB = (e) => { 
-//     e.preventDefault();
-//     console.log(ShowBreakClub);
-// }
+
 
 function MenuPage() {
+    
+    
+    const showT= (e) => { 
+      
+
+        console.log(MenuLunch);
+        
+        
+    }
+
+
+
+    // const showB = (e) => { 
+    
+    //     console.log(ShowBreakClub);
+    // }
+      
     return ( 
 
         <div className='containerMenuPage'> 
@@ -16,8 +31,10 @@ function MenuPage() {
                 <input type='text' className='nameComensal' placeholder='Ingresar nombre'/>
             </div>
             <div>
-                <button className='tMenu'>Menú Tradicional</button>
+                <button className='tMenu' onClick={showT()}>Menú Tradicional</button>
                 {/* <button className='tMenu' onClick={showB()}>Breakfast Club</button> */}
+
+                <MenuLunch  display="none" />
             </div>
         </div>
 
