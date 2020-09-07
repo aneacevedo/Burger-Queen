@@ -39,20 +39,19 @@ nextPath(path) {
             ref={(element)=> {
                 this.dropdownMenu = element;
             }}>
-                <div id='contentToggle'>
+            
                     <button className="toggle" onClick = {this.showMenu}>
                     &#9776;
                     </button>
-                    
-                </div>
+
                 {
                 this.state.showMenu
                 ? (
 
                <div className="containerAside" key="asideView" display="none"  >
-                 <button className="itemMenu" type='button' onClick={() => this.nextPath('/thirdPage')}> Mesas </button>
-                 <button className="itemMenu" type='button' onClick={() => this.nextPath('/')}> Pedidos</button>
-                 <button className="itemMenu" type='button' onClick={() => this.nextPath('/')}>Cambiar cuenta</button>
+                <a className="itemMenu" href="/thirdPage"> Mesas </a>
+                <a className="itemMenu" href="/menu"> Pedidos</a>
+                <a className="itemMenu" href="/">Cambiar cuenta</a>
                </div>
 
                 )

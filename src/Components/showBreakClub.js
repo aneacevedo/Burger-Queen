@@ -6,20 +6,21 @@ function ShowBreakfast () {
     return ( 
       <Fragment>
         {MenuBreakfast.map((item, index)=> 
-          <div className="containerFood" key={index.id}> 
-           <div className='textImgBox'>
-              <div className='textContainer'>
-                <p>{item.title}</p>
-                <p>{item.time}</p>
-                <p>${item.price}</p>
-              </div>
-            
-             <div className='containerImgFood'>
-               {/* <img className='imgFood' 
-               src={item.img}/> */}
-             </div>
-           </div>
-          </div>)}
+                <label className="containerFood" key={index.id}>
+                <div className='textImgBox'>
+                   <div className='textContainer'>
+                     <p>{item.title}</p>
+                     <p>{item.time}</p>
+                     <p>${item.price}</p>
+                    </div>
+                    <div className='containerImgFood'>
+                      {/* <img className='imgFood' 
+                      src={item.img}/> */}
+                    </div>
+                 </div>
+                <input type='checkbox'/>
+                <span className='checkmark'></span>
+              </label>)}
         </Fragment>
         );
   }

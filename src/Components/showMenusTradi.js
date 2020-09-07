@@ -4,6 +4,7 @@ import menuAcompanimients from '../data/menuAccompaniment.json';
 import menuAggregates from '../data/menuAggregates.json';
 import menuDrinks from '../data/menuDrinks.json';
 
+
 function ShowMenuTradi () {
   const [MenuLunch ] = useState(menuLunch);
   const [MenuAcomp] = useState(menuAcompanimients);
@@ -13,36 +14,41 @@ function ShowMenuTradi () {
   return ( 
     <Fragment>
       {MenuLunch.map((item, index)=> 
-        <div className="containerFood" key={index.id}> 
-         <div className='textImgBox'>
-            <div className='textContainer'>
-              <p>{item.title}</p>
-              <p>{item.time}</p>
-              <p>${item.price}</p>
+      <label className="containerFood" key={index.id}>
+        <div className='textImgBox'>
+           <div className='textContainer'>
+             <p>{item.title}</p>
+             <p>{item.time}</p>
+             <p>${item.price}</p>
             </div>
-           <div className='containerImgFood'>
-             {/* <img className='imgFood' 
-             src={item.img}/> */}
-           </div>
+            <div className='containerImgFood'>
+              {/* <img className='imgFood' 
+              src={item.img}/> */}
+            </div>
          </div>
-        </div>)}
+        <input type='checkbox'/>
+        <span className='checkmark'></span>
+      </label>
+       )}
         <div>
           <p className='containerTextMenuPage'>Acompañamientos</p>
           <div className="containerMenuLunchOthers">
           {MenuAcomp.map((item,index)=>
-            <div className="containerFood" key={index.id}> 
-            <div className='textImgBox'>
-               <div className='textContainer'>
-                 <p>{item.title}</p>
-                 <p>{item.time}</p>
-                 <p>${item.price}</p>
-               </div>
-              <div className='containerImgFood'>
-                {/* <img className='imgFood' 
-                src={item.img}/> */}
-              </div>
-            </div>
-           </div>
+                  <label className="containerFood" key={index.id}>
+                  <div className='textImgBox'>
+                     <div className='textContainer'>
+                       <p>{item.title}</p>
+                       <p>{item.time}</p>
+                       <p>${item.price}</p>
+                      </div>
+                      <div className='containerImgFood'>
+                        {/* <img className='imgFood' 
+                        src={item.img}/> */}
+                      </div>
+                   </div>
+                  <input type='checkbox'/>
+                  <span className='checkmark'></span>
+                </label>
           )}
           </div>
         </div>
@@ -50,19 +56,21 @@ function ShowMenuTradi () {
           <p className='containerTextMenuPage'>Agregados</p>
           <div className='containerMenuLunchOthers'>
           {MenuAggregates.map((item,index)=>
-          <div className="containerFood" key={index.id}> 
-            <div className='textImgBox'>
-               <div className='textContainer'>
-                 <p>{item.title}</p>
-                 <p>{item.time}</p>
-                 <p>${item.price}</p>
-               </div>
-              <div className='containerImgFood'>
-                {/* <img className='imgFood' 
-                src={item.img}/> */}
-              </div>
-            </div>
-           </div>
+                <label className="containerFood" key={index.id}>
+                <div className='textImgBox'>
+                   <div className='textContainer'>
+                     <p>{item.title}</p>
+                     <p>{item.time}</p>
+                     <p>${item.price}</p>
+                    </div>
+                    <div className='containerImgFood'>
+                      {/* <img className='imgFood' 
+                      src={item.img}/> */}
+                    </div>
+                 </div>
+                <input type='checkbox'/>
+                <span className='checkmark'></span>
+              </label>
           )}
         </div>
         </div>
@@ -70,19 +78,21 @@ function ShowMenuTradi () {
           <p className='containerTextMenuPage'>Bebestibles</p>
           <div className='containerMenuLunchOthers'>
           {MenuDrinks.map((item,index)=>
-          <div className="containerFood" key={index.id}> 
-            <div className='textImgBox'>
-               <div className='textContainer'>
-                 <p>{item.title}</p>
-                 <p>{item.time}</p>
-                 <p>${item.price}</p>
-               </div>
-              <div className='containerImgFood'>
-                {/* <img className='imgFood' 
-                src={item.img}/> */}
+             <label className="containerFood" key={index.id}>
+             <div className='textImgBox'>
+                <div className='textContainer'>
+                  <p>{item.title}</p>
+                  <p>{item.time}</p>
+                  <p>${item.price}</p>
+                 </div>
+                 <div className='containerImgFood'>
+                   {/* <img className='imgFood' 
+                   src={item.img}/> */}
+                 </div>
               </div>
-            </div>
-           </div>
+             <input type='checkbox'/>
+             <span className='checkmark'></span>
+           </label>
         )}
         </div>
         </div>
