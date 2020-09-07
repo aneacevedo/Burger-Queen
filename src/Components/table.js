@@ -1,5 +1,11 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
+import merida from '../media/Merida.png';
+import nemo from '../media/Nemo.png';
+import remi from '../media/Remi.png';
+import arlo from '../media/Arlo.png';
+import russel from '../media/Russel.png';
+import coco from '../media/Coco.png';
 
 
 class Table extends React.Component {
@@ -9,12 +15,24 @@ class Table extends React.Component {
     render () {
         return ( 
             <div className='contentTables'>
-                <div className="tableStyle" onClick={() => this.nextPath('/menu')}>Mesa Nemo</div>
-                <div className="tableStyle">Mesa Merida</div>
-                <div className="tableStyle">Mesa Remi</div>
-                <div className="tableStyle">Mesa Russel</div>
-                <div className="tableStyle">Mesa Arlo</div>
-                <div className="tableStyle">Mesa Coco</div>
+                <div className="tableStyle" onClick={() => this.nextPath('/menu')}>
+                <img src={nemo} className="imgTable" alt="nemo"/>
+                    Mesa Nemo</div>
+                <div className="tableStyle">
+                        <img src={merida} className="imgTable" alt="merida"/>
+                    Mesa Merida</div>
+                <div className="tableStyle">
+                <img src={remi} className="imgTable" alt="remi"/>
+                    Mesa Remi</div>
+                <div className="tableStyle">
+                <img src={russel} className="imgTable" alt="russel"/>
+                    Mesa Russel</div>
+                <div className="tableStyle">
+                <img src={arlo} className="imgTable" alt="arlo"/>
+                    Mesa Arlo</div>
+                <div className="tableStyle">
+                <img src={coco} className="imgTable" alt="coco"/>
+                Mesa Coco</div>
             </div>     
         )}
 }

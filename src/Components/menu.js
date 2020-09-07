@@ -2,6 +2,8 @@ import React from 'react';
 import ShowMenuTradi from './showMenusTradi';
 import { withRouter } from 'react-router'
 import ShowBreakfast from './showBreakClub';
+import trash from '../media/trash.png';
+import BurgerToggle from './burgerToggle.js';
 
 
 class MenuPage extends React.Component {
@@ -24,11 +26,11 @@ class MenuPage extends React.Component {
 
  render () {
   return ( 
-    <div className='containerMenuPage'> 
-      <div className='leftSideMenuPage'>  
+    <div className='containerMenuPage'>
+      <div className='leftSideMenuPage'> 
         <header className='headerMenu'>
-      
          <div className='tableAndName'>
+         <BurgerToggle/> 
            <p className='titleM'>Nombredemesa</p>
            <input type='text' className='nameComensal' placeholder='Ingresar nombre'/>
           </div>
@@ -57,7 +59,9 @@ class MenuPage extends React.Component {
          <div className='textOrder'> 
             <div className='titleAndImg'>
               <p className='titleOrder'>Pedido</p>
-              <img src='../media/trash.png' alt='trash'/>
+              <div className='imgTrashContainer'>
+                <img src={trash} className='imgTrash' alt='trash'/>
+              </div>
             </div>
             <div className='orderPicksContainer'>
               <p>ordenes</p>

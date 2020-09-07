@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -45,7 +46,7 @@
     font-size: 2rem;
     color: white;
     background: rgb(0, 170, 223);
-    background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%);
+    background-image: linear-gradient(to bottom, #00aadf, #118ecd, #2a71b6, #3a559b, #43387d);
     border: none;
     border-radius: 8px;
     padding: 2px;
@@ -57,7 +58,7 @@
 /* Segunda página */
 
 .secondPageBackground {
-    align-items: center;
+    /* align-items: center; */
     background: url('./media/ratatouille.png') no-repeat;
     position: fixed;
     height: 100vh;
@@ -66,18 +67,9 @@
     display: flex;
 }
 
-.containerAside {
-    width: 20vw;
-    height: 100vh;
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
-    border: none;
-}
-
 .secondPageContent {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     text-align: center;
     align-content: center;
     width: 50vw;
@@ -93,10 +85,15 @@
     justify-content: center;
 }
 
+.secondPageContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
 .selectNames {
     background-color: #00AADF;
     border: 2px solid #00AADF;
-    margin-left: 25%;
     width: 50%;
     font-size: 1.5rem;
     padding: 2px;
@@ -114,7 +111,7 @@
     font-size: 1.8rem;
     color: white;
     background: rgb(0, 170, 223);
-    background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%);
+    background-image: linear-gradient(to bottom, #00aadf, #118ecd, #2a71b6, #3a559b, #43387d);
     border: none;
     border-radius: 8px;
     padding: 2px;
@@ -131,16 +128,18 @@
     display: flex;
 }
 
-.title{
+.title {
     margin-top: 10vh;
     text-align: center;
     color: #48387D;
 }
-.titleM{
+
+.titleM {
     font-size: 36px;
-    color:black;
-    margin-right:25px;
+    color: black;
+    margin-right: 25px;
 }
+
 .contentTables {
     display: flex;
     flex-wrap: wrap;
@@ -159,7 +158,15 @@
     color: white;
     text-align: center;
     font-size: 1.5rem;
-    line-height: 15vh;
+    line-height: 5vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgTable {
+    height: 100px;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -173,7 +180,7 @@
     height: 30px;
     background: rgba(0, 170, 223, 0.42);
     text-align: center;
-    padding:2px;
+    padding: 2px;
     color: rgba(0, 0, 0, 0.52);
 }
 
@@ -182,33 +189,45 @@
     height: 40px;
     font-size: 22px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-right:80px;
+    margin-right: 80px;
     background: #E5E5E5;
-    border:none;
+    border: none;
     color: #2B2B2B;
     line-height: 28px;
-}
-.tMenu:hover{
-    cursor:pointer;
-    background: #00AADF;
-    color:white;
+    position: relative;
 }
 
+.tMenu:hover {
+    cursor: pointer;
+    background: #00AADF;
+    color: white;
+}
+
+
 /* sidebar */
+
+.containerAside {
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background-image: linear-gradient(to bottom, #00aadf, #118ecd, #2a71b6, #3a559b, #43387d);
+}
 
 .sideBar {
     font-size: 4rem;
     text-align: center;
-    color: #FFFFFF;
-    flex-direction: column;
+    /* background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%); */
 }
 
-#contentToggle {
+
+/* #contentToggle {
     margin-bottom: 15vh;
-}
+} */
 
 .boxMenuToggle {
-    background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%);
+    /* background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%); */
     width: 20vw;
     height: 100vh;
     z-index: 5;
@@ -218,10 +237,11 @@
     width: 100%;
     height: 15vh;
     text-align: center;
-    background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%);
+    /* background: linear-gradient(180deg, rgba(0, 170, 223, 1) 0%, rgba(67, 56, 125, 1) 100%);*/
     color: #FFFFFF;
     border-style: none;
-    border-bottom: 1px solid rgba(67, 56, 125, 1) 100%;
+    text-decoration: none;
+    /* border-bottom: 1px solid rgba(67, 56, 125, 1) 100%; */
     font-size: 2vw;
 }
 
@@ -240,12 +260,16 @@
     cursor: pointer;
     margin-left: 3vw;
     margin-top: 2vh;
+    margin-right: 130px;
+    margin-bottom: 150px;
 }
-.containerMenuPage{
+
+.containerMenuPage {
     display: flex;
-    flex-flow:row nowrap;
+    flex-flow: row nowrap;
 }
-.containerFood{
+
+.containerFood {
     width: 310px;
     height: 114px;
     background: #FFFFFF;
@@ -253,80 +277,98 @@
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-bottom: 44px;
-    margin-right:80px;
-    padding:12px 166px 75px 17px;
+    margin-right: 80px;
+    padding: 12px 166px 75px 17px;
     line-height: 1.9em;
 }
 
-.containerFood:hover{
+.containerFood input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.containerFood input:checked~.checkmark {
+    padding: 100%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 5px 5px 5px 5px rgba(0, 170, 223, 0.42);
 }
 
-.btnTips:hover{
+.btnTips:hover {
     color: #7a7a7a;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 4px 4px 4px rgba(0, 170, 223, 0.42)
 }
-.textImgBox{
+
+.textImgBox {
     display: flex;
-    flex-flow:row nowrap;
+    flex-flow: row nowrap;
     width: 155px;
 }
-.textContainer{
+
+.textContainer {
     width: 155px;
 }
-.leftSideMenuPage{
+
+.leftSideMenuPage {
     width: 70%;
     height: 100%;
 }
-.rightSideMenuPage{
-    width:30%;
+
+.rightSideMenuPage {
+    width: 30%;
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
 }
-.orderContainer{
-    width:100%;
+
+.orderContainer {
+    width: 100%;
     height: 250px;
-    display:flex;
-    flex-flow:column nowrap;
+    display: flex;
+    flex-flow: column nowrap;
     align-items: center;
 }
-.textOrder{
-    width: 100%;
 
+.textOrder {
+    width: 100%;
 }
-textarea{
-    margin-top:20px;
+
+textarea {
+    margin-top: 20px;
     width: 340px;
     height: 70px;
     background: rgba(0, 170, 223, 0.42);
     color: rgba(0, 0, 0, 0.52);
     font-size: 18px;
-    padding:10px;
-    border:none;
+    padding: 10px;
+    border: none;
 }
-.containerTipsAndBtn{
+
+.containerTipsAndBtn {
     width: 410px;
     background: #FFFFFF;
     height: 570px;
-    display:flex;
+    display: flex;
     margin-top: 600px;
-    flex-flow:column nowrap;
+    flex-flow: column nowrap;
     align-items: center;
     position: fixed;
     /* background: #FFFFFF; */
     border: 1px solid #C4C4C4;
 }
-.titleTips{
+
+.titleTips {
     font-size: 24px;
     color: #43387D;
-    font-weight:bold;
-    text-align:center;
+    font-weight: bold;
+    text-align: center;
 }
-.btnTips{
+
+.btnTips {
     margin: 10px 10px 25px 10px;
     background: #FFFFFF;
-    border:none;
+    border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 20px;
     color: #AFAEB3;
@@ -334,9 +376,10 @@ textarea{
     width: 80px;
     height: 35px;
 }
-.headerMenu{
+
+.headerMenu {
     width: 70%;
-    height:150px;
+    height: 150px;
     position: fixed;
     background-color: #FFFFFF;
     display: flex;
@@ -344,61 +387,73 @@ textarea{
     align-items: center;
     padding: 65px 0px 0px 0px;
 }
-.tableAndName{
+
+.tableAndName {
     display: flex;
     flex-flow: row nowrap;
     margin-bottom: 30px;
+    position: relative;
+    margin-bottom: -150px;
+    margin-right: 100px;
 }
-.containerShowMenu{
+
+.containerShowMenu {
     display: flex;
     flex-flow: row wrap;
     margin-top: 230px;
-    margin-left:100px;
+    margin-left: 100px;
 }
-.titleOrder{
+
+.titleOrder {
     font-size: 42px;
     line-height: 56px;
     color: #43387D;
-    margin-bottom:38px;
+    margin-bottom: 38px;
     margin-right: 20px;
     margin-left: 120px;
 }
-.titleAndImg{
+
+.titleAndImg {
     display: flex;
     flex-flow: row nowrap;
-    position:fixed;
+    position: fixed;
     align-items: center;
     width: 100%;
     background-color: #F8F8F8;
-    height: 150px;
+    height: 125px;
+    padding-top: 20px;
 }
-.orderPicksContainer{
-    margin-top:150px;
+
+.orderPicksContainer {
+    margin-top: 145px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 300px;
-    height:100%;
+    height: 100%;
     background-color: #E5F7FC;
 }
-.containerPriceBtn{
+
+.containerPriceBtn {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.totalPrice{
+
+.totalPrice {
     text-align: right;
     font-size: 28px;
     font-weight: bold;
     line-height: 53px;
     color: #BB0707;
-    margin-right:100px;
+    margin-right: 100px;
 }
-.aceptBtn{
-    margin:30px 20px 30px 35px;
+
+.aceptBtn {
+    margin: 30px 20px 30px 35px;
     background: #00AADF;
-    border:none;
+    border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 350px;
     height: 70px;
@@ -406,11 +461,13 @@ textarea{
     font-size: 24px;
     color: #FFFFFF;
 }
-.containerMenuLunchOthers{
+
+.containerMenuLunchOthers {
     display: flex;
     flex-flow: row wrap;
 }
-.containerTextMenuPage{
+
+.containerTextMenuPage {
     border: 1px solid #000000;
     box-sizing: border-box;
     width: 250px;
@@ -420,6 +477,16 @@ textarea{
     margin: 10px 0px 25px 0px;
     letter-spacing: 0.15em;
     font-weight: 500;
+}
+
+.imgTrashContainer {
+    width: 35px;
+    height: 35px;
+    margin: 0px 0px 35px 6px;
+}
+
+.imgTrash {
+    width: 100%;
 }
 
 @media screen and (max-width:1024px),

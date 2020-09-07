@@ -11,19 +11,17 @@ import Waiter from './waiters';
         this.props.history.push(path);
       }
        
+      
     render(){
             return ( 
             <div className = "secondPageBackground">
-                <div className="containerAside">
-                <div className="toggleContainer">
+                {/* <div className="toggleContainer"> */}
                 <BurgerToggle/>
-                </div>
-                </div>
-                <div className='secondPageContent'>
-            <div>
+                
+            <div className='secondPageContent'>
+            <div className="secondPageContainer">
             <p>Selecciona tu nombre en la lista:</p>
             <Waiter />
-
             <button className='btnSecondPage'  onClick={() => this.nextPath('/thirdPage')}>Ingresar</button>
             </div> 
             </div> 
