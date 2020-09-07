@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { withRouter } from 'react-router'
 
 class InitialPage extends React.Component {
     nextPath(path) {
@@ -24,4 +24,4 @@ class InitialPage extends React.Component {
 
 }
 
-export default InitialPage;
+export default withRouter(InitialPage);
