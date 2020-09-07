@@ -2,7 +2,7 @@ import React from 'react';
 import '../index.css';
 import Table from './table.js';
 import BurgerToggle from './burgerToggle';
-
+import { withRouter } from 'react-router'
 
 
 class ThirdPage extends React.Component {
@@ -23,4 +23,4 @@ class ThirdPage extends React.Component {
     }
 }
 
-export default ThirdPage;
+export default withRouter(ThirdPage);

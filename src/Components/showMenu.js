@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
 import PropTypes from 'prop-types';
 
+
+
 class showMenu extends Component {
     styleCompleted(){
         return {
@@ -17,12 +19,13 @@ class showMenu extends Component {
         const {showMenu}= this.props;
 
 
-        return <p style= {this.styleCompleted()}>
-            {task.title} -
-            {task.description} -
-            {task.done} -
-            {task.id}
-        </p>
+        return 
+        // <p style= {this.styleCompleted()}>
+        //     {task.title} -
+        //     {task.description} -
+        //     {task.done} -
+        //     {task.id}
+        // </p>
     }
 
 }

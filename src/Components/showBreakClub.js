@@ -1,33 +1,27 @@
-import React from 'react';
-import data from '../data/menuBreakfast.json';
+import React, {useState, Fragment} from 'react';
+import menuBreakfast from '../data/menuBreakfast.json';
 
-
-// const renderMenuBreak = (arrayBreakfastClub) => {
-//     document.querySelector('.showFoodBreakfast').innerHTML = arrayBreakfastClub.map(food =>
-//         <p>ayuda</p>)
-// }
-
-const dataBreakfast = data.map(food =>
-    <div className="containerFood">
-        <p>{food.title}</p>
-        <div className='containerImgFood'>
-            <img className='imgFood' 
-            src={food.img}/>
-        </div>
-    </div>
-);
-
-
-class ShowBreakClub extends React.Component{
-    render(){
-        
-        return ( 
-                <div className='showFoodBreakfast'>
-                 {dataBreakfast}
-                 </div>
-                );
-    }
-}
-
-
-export default ShowBreakClub;
+function ShowBreakfast () {
+    const [MenuBreakfast ] = useState(menuBreakfast);
+    return ( 
+      <Fragment>
+        {MenuBreakfast.map((item, index)=> 
+          <div className="containerFood" key={index.id}> 
+           <div className='textImgBox'>
+              <div className='textContainer'>
+                <p>{item.title}</p>
+                <p>{item.time}</p>
+                <p>${item.price}</p>
+              </div>
+            
+             <div className='containerImgFood'>
+               {/* <img className='imgFood' 
+               src={item.img}/> */}
+             </div>
+           </div>
+          </div>)}
+        </Fragment>
+        );
+  }
+  
+  export default ShowBreakfast;
