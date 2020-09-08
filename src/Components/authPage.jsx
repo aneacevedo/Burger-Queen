@@ -3,6 +3,7 @@ import {useHistory} from 'react-router-dom';
 import 'firebase/auth';
 import 'firebase/firestore';
 import { useFirebaseApp } from 'reactfire';
+import BurgerToggle from './burgerToggle';
 
 
 function AuthPage(){
@@ -28,24 +29,28 @@ function AuthPage(){
     
         return(
             <div className='authPageBackground'>
+                <BurgerToggle/>
                 <div className='authPageContent'>
                     <div className='logoContainer'>
                         <p>logo</p>
                     </div>
-                    <form >
+                    <div className='authContainer'>
+                    <form className='formCont'>
                         <label htmlFor='email' 
                         >
-                            Ingresar email</label>
+                            Ingresar email: </label>
                         <input type='email' 
                         placeholder='Correo Electrónico' 
                         autoComplete='username'
+                        className='inputAuth'
                         onChange={ (e) => setEmail(e.target.value) }
                         >
                         </input>
-                        <label htmlFor='password'>Ingresar contraseña</label>
+                        <label htmlFor='password'>Ingresar contraseña: </label>
                         <input type='password' 
                         placeholder='Contraseña' 
                         autoComplete='current-password'
+                        className='inputAuth'
                         onChange={ (e) => setPassword(e.target.value) }
                         >
                         </input>
@@ -56,6 +61,7 @@ function AuthPage(){
                             Ingresar
                             </button>
                     </form>
+                </div>
                 </div>
             </div>
         );
