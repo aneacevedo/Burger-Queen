@@ -1,6 +1,6 @@
 import React from 'react';
 import '../index.css';
-import BurgerToggle from './burgerToggle.js';
+import BurgerToggle from './burgerToggle';
 import {withRouter} from 'react-router';
 import Waiter from './waiters';
 
@@ -22,6 +22,7 @@ import Waiter from './waiters';
             <div className="secondPageContainer">
             <p>Selecciona tu nombre en la lista:</p>
             <Waiter />
+            
             <button className='btnSecondPage'  onClick={() => this.nextPath('/thirdPage')}>Ingresar</button>
             </div> 
             </div> 

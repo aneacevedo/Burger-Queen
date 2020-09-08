@@ -1,6 +1,6 @@
 import React from 'react';
 import '../index.css';
-import Table from './table.js';
+import Table from './table';
 import BurgerToggle from './burgerToggle';
 import { withRouter } from 'react-router'
 

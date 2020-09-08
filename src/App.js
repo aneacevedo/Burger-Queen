@@ -1,10 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
-import InitialPage from './Components/initialPage.js';
-import SecondPage  from './Components/secondPage.js';
-import ThirdPage from './Components/thirdPage.js';
-import MenuPage from './Components/menu.js';
+import InitialPage from './Components/initialPage';
+import AuthPage from './Components/authPage';
+import SecondPage  from './Components/secondPage';
+import ThirdPage from './Components/thirdPage';
+import MenuPage from './Components/menu';
+
 
 class App extends React.Component{
   render(){
@@ -17,6 +19,10 @@ class App extends React.Component{
             path="/"
             component={InitialPage} 
           />
+           <Route
+          exact
+          path="/authPage"
+          render={ () => <AuthPage/>} />
           <Route
           exact
           path="/secondPage"
