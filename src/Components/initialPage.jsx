@@ -14,7 +14,7 @@ class InitialPage extends React.Component {
                 <p>¿Quién eres?</p>
                 <div className="btnContent">
                     <button className='btnInitialPage'>Cocinero</button>
-                    <button className='btnInitialPage' onClick={() => this.nextPath('/secondPage') }>Mesero</button>
+                    <button className='btnInitialPage' onClick={() => this.nextPath('/authPage') }>Mesero</button>
                 </div>
             </div>
         </div>   

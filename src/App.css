@@ -57,7 +57,7 @@
 
 /* Segunda página */
 
-.secondPageBackground {
+.authPageBackground {
     /* align-items: center; */
     background: url('./media/ratatouille.png') no-repeat;
     position: fixed;
@@ -67,7 +67,7 @@
     display: flex;
 }
 
-.secondPageContent {
+.authPageContent {
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
@@ -85,13 +85,32 @@
     justify-content: center;
 }
 
-.secondPageContainer {
+.authContainer {
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: column;
     align-items: center;
 }
 
-.selectNames {
+.logoContainer {
+    margin: 20px;
+}
+
+.formCont {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+}
+
+.inputAuth {
+    padding: 10px;
+    margin: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* .selectNames {
     background-color: #00AADF;
     border: 2px solid #00AADF;
     width: 50%;
@@ -101,11 +120,11 @@
     margin-top: 10%;
     color: white;
     margin-bottom: 2%;
-}
+} */
 
-.btnSecondPage {
+.btnAuthPage {
     align-self: center;
-    margin-top: 50px;
+    margin-top: 20px;
     width: 220px;
     height: 50px;
     font-size: 1.8rem;

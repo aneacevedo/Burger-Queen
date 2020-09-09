@@ -1,9 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ShowMenuTradi from './showMenusTradi';
 import { withRouter } from 'react-router'
 import ShowBreakfast from './showBreakClub';
 import trash from '../media/trash.png';
-import BurgerToggle from './burgerToggle.js';
+import BurgerToggle from './burgerToggle';
+
+
+
+const Ayuda = ({ola}) => {
+  const [order, setOrder] = useState([])
+    return ola({order, setOrder} );
+};
+
 
 
 class MenuPage extends React.Component {
@@ -27,6 +35,16 @@ class MenuPage extends React.Component {
  render () {
   return ( 
     <div className='containerMenuPage'>
+      <Ayuda 
+      ola={
+        ({order, setOrder}) =>{
+          const handleSetOrder = (order) => {
+            setOrder(order)
+           }
+        }
+      }
+      />
+
       <div className='leftSideMenuPage'> 
         <header className='headerMenu'>
          <div className='tableAndName'>
@@ -43,10 +61,10 @@ class MenuPage extends React.Component {
           {
             this.state.showMenuClub
             ? (
-              <ShowBreakfast/>
+              <ShowBreakfast />
             )
             : (
-              <ShowMenuTradi/>
+              <ShowMenuTradi />
             )
           }
         
