@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router'
+import bqtrans from '../media/BQ-trans.png';
 
 class InitialPage extends React.Component {
     nextPath(path) {
@@ -10,6 +11,7 @@ class InitialPage extends React.Component {
     <div className = "initialPageBackground">
         <div className='initialPageCard'>
             <div className='initialPageContent'>
+            <img src={bqtrans} className="imgLogo1" alt="logo"/>
                 <p>¡Bienvenido a Burger Kingdom!</p>
                 <p>¿Quién eres?</p>
                 <div className="btnContent">

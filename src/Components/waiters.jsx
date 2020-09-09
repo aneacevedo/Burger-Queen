@@ -23,7 +23,7 @@ function Waiter () {
             <select className='selectNames' name='Waiter' required onChange={nameWaiter}>
             <option value disabled selected>Seleccione</option>
             {
-            Waiters.map((item, index)=> <option key={index.id} name="nombre">{item.name}</option>)
+            Waiters.map((item)=> <option key={item.id} name="nombre">{item.name}</option>)
             }
             
             </select>
