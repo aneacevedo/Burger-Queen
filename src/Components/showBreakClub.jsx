@@ -18,17 +18,6 @@ function ShowBreakfast (props) {
       handleSetOrder(newSelect);
     };
 
-    // const oli = document.querySelector('#oa');
-    // oli.addEventListener('click', (e) =>{
-    // if(e.target.checked){
-    //   console.log('check');
-    //   } else{
-    //     console.log('notchecked');
-    //   }
-    // });
-  
-
-
     return ( 
       <Fragment>
         {MenuBreakfast.map((item)=> 

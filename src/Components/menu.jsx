@@ -57,29 +57,14 @@ function MenuPage() {
                 <img src={trash} className='imgTrash' alt='trash'/>
               </div>
             </div>
-            <div className='orderPicksContainer'>
+            <div>
               <OrderList order={order} handleSetOrder={handleSetOrder}/>
             </div>  
          </div>
         </div>
 
 
-        <div className='containerTipsAndBtn'>
-          <div>
-            <textarea placeholder='Añadir notas al chef'></textarea>
-          </div>
-          <div className='containerTips'>
-            <p className='titleTips'>Propina</p>
-            <button className='btnTips'>$500</button>
-            <button className='btnTips'>$1000</button>
-            <button className='btnTips'>$1500</button>
-            <button className='btnTips'>$2000</button>
-          </div>
-          <div className='containerPriceBtn'>
-            <p className='totalPrice'>Total $</p>
-            <button className='aceptBtn'>CONFIRMAR PEDIDO</button>
-          </div>
-         </div>
+
 
        </div>    
     </div>

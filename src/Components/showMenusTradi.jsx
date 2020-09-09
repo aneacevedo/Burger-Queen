@@ -13,7 +13,6 @@ function ShowMenuTradi (props) {
   const { order, handleSetOrder} = props;
 
   const selectFood = (item) =>{
-    console.log("click");
     const newSelect = [
       ...order,
       {
