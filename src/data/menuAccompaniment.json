@@ -3,13 +3,15 @@
         "img": "",
         "title": "Papas Fritas",
         "time": "35 min",
-        "price": 1100
+        "price": 1100,
+        "total": 1
     },
     {
         "id": 7,
         "img": "",
         "title": "Aros de Cebollas",
         "time": "15 min",
-        "price": 900
+        "price": 900,
+        "total": 1
     }
 ]

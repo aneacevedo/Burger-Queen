@@ -5,16 +5,32 @@ import menuAggregates from '../data/menuAggregates.json';
 import menuDrinks from '../data/menuDrinks.json';
 
 
-function ShowMenuTradi () {
+function ShowMenuTradi (props) {
   const [MenuLunch ] = useState(menuLunch);
   const [MenuAcomp] = useState(menuAcompanimients);
   const [MenuAggregates] = useState(menuAggregates);
   const[MenuDrinks] = useState(menuDrinks);
+  const { order, handleSetOrder} = props;
+
+  const selectFood = (item) =>{
+    console.log("click");
+    const newSelect = [
+      ...order,
+      {
+        id: item.id,
+        title:item.title,
+        price: item.price,
+        total:1
+      },
+    ];
+    handleSetOrder(newSelect);
+  };
+
 
   return ( 
     <Fragment>
-      {MenuLunch.map((item, index)=> 
-      <label className="containerFood" key={index.id}>
+      {MenuLunch.map((item)=> 
+      <label className="containerFood" key={item.id}>
         <div className='textImgBox'>
            <div className='textContainer'>
              <p>{item.title}</p>
@@ -26,15 +42,15 @@ function ShowMenuTradi () {
               src={item.img}/> */}
             </div>
          </div>
-        <input type='checkbox'/>
+        <input key={item.id} type='checkbox' onChange={() => selectFood(item)}/>
         <span className='checkmark'></span>
       </label>
        )}
         <div>
           <p className='containerTextMenuPage'>Acompañamientos</p>
           <div className="containerMenuLunchOthers">
-          {MenuAcomp.map((item,index)=>
-                  <label className="containerFood" key={index.id}>
+          {MenuAcomp.map((item, id)=>
+                  <label className="containerFood" key={item.id}>
                   <div className='textImgBox'>
                      <div className='textContainer'>
                        <p>{item.title}</p>
@@ -46,8 +62,8 @@ function ShowMenuTradi () {
                         src={item.img}/> */}
                       </div>
                    </div>
-                  <input type='checkbox'/>
-                  <span className='checkmark'></span>
+                  <input key={item.id} type='checkbox' onChange={() => selectFood(item)} />
+                  <span   className='checkmark'></span>
                 </label>
           )}
           </div>
@@ -55,8 +71,8 @@ function ShowMenuTradi () {
         <div>
           <p className='containerTextMenuPage'>Agregados</p>
           <div className='containerMenuLunchOthers'>
-          {MenuAggregates.map((item,index)=>
-                <label className="containerFood" key={index.id}>
+          {MenuAggregates.map((item)=>
+                <label className="containerFood" key={item.id}>
                 <div className='textImgBox'>
                    <div className='textContainer'>
                      <p>{item.title}</p>
@@ -68,7 +84,7 @@ function ShowMenuTradi () {
                       src={item.img}/> */}
                     </div>
                  </div>
-                <input type='checkbox'/>
+                <input key={item.id} type='checkbox' onChange={() => selectFood(item) }/>
                 <span className='checkmark'></span>
               </label>
           )}
@@ -77,8 +93,8 @@ function ShowMenuTradi () {
         <div>
           <p className='containerTextMenuPage'>Bebestibles</p>
           <div className='containerMenuLunchOthers'>
-          {MenuDrinks.map((item,index)=>
-             <label className="containerFood" key={index.id}>
+          {MenuDrinks.map((item)=>
+             <label className="containerFood" key={item.id}>
              <div className='textImgBox'>
                 <div className='textContainer'>
                   <p>{item.title}</p>
@@ -90,7 +106,7 @@ function ShowMenuTradi () {
                    src={item.img}/> */}
                  </div>
               </div>
-             <input type='checkbox'/>
+             <input key={item.id}type='checkbox' onChange={() => selectFood(item)}/>
              <span className='checkmark'></span>
            </label>
         )}

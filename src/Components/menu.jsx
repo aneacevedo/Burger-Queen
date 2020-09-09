@@ -4,47 +4,23 @@ import { withRouter } from 'react-router'
 import ShowBreakfast from './showBreakClub';
 import trash from '../media/trash.png';
 import BurgerToggle from './burgerToggle';
+import OrderList from './orderList';
 
+function MenuPage() {
+   const[order, setOrder]= useState([]);
+ 
+   const handleSetOrder = (order) =>{
+     setOrder(order);
+   }
 
-
-const Ayuda = ({ola}) => {
-  const [order, setOrder] = useState([])
-    return ola({order, setOrder} );
-};
-
-
-
-class MenuPage extends React.Component {
-
- constructor(){
-   super();
-
-   this.state ={
-    showMenuClub: false,
+  const [showMenuClub, setShowMenuClub] = useState(false);
+  const clickShowMenu = (e) => {
+    e.preventDefault();
+    setShowMenuClub(!showMenuClub);
   }
-  this.showMenuClub = this.showMenuClub.bind(this);
- }
- showMenuClub(event){
-   event.preventDefault();
 
-   this.setState({
-     showMenuClub: !this.state.showMenuClub,
-   });
- }
-
- render () {
-  return ( 
+  return(
     <div className='containerMenuPage'>
-      <Ayuda 
-      ola={
-        ({order, setOrder}) =>{
-          const handleSetOrder = (order) => {
-            setOrder(order)
-           }
-        }
-      }
-      />
-
       <div className='leftSideMenuPage'> 
         <header className='headerMenu'>
          <div className='tableAndName'>
@@ -53,18 +29,18 @@ class MenuPage extends React.Component {
            <input type='text' className='nameComensal' placeholder='Ingresar nombre'/>
           </div>
           <div className='containerBtnsMenus'>
-             <button className='tMenu' onClick={this.showMenuClub}>Menú Tradicional</button>
-             <button className='tMenu' onClick={this.showMenuClub}>Breakfast Club</button>
+             <button className='tMenu' onClick={clickShowMenu}>Menú Tradicional</button>
+             <button className='tMenu' onClick={clickShowMenu}>Breakfast Club</button>
           </div>
         </header>
         <div className="containerShowMenu"> 
           {
-            this.state.showMenuClub
+            showMenuClub
             ? (
-              <ShowBreakfast />
+              <ShowBreakfast order={order}  handleSetOrder={handleSetOrder} />
             )
             : (
-              <ShowMenuTradi />
+              <ShowMenuTradi order={order}  handleSetOrder={handleSetOrder}/>
             )
           }
         
@@ -82,7 +58,7 @@ class MenuPage extends React.Component {
               </div>
             </div>
             <div className='orderPicksContainer'>
-              <p>ordenes</p>
+              <OrderList order={order} handleSetOrder={handleSetOrder}/>
             </div>  
          </div>
         </div>
@@ -109,8 +85,15 @@ class MenuPage extends React.Component {
     </div>
 
   );
- }
-   
 }
-
 export default withRouter(MenuPage);
+
+
+
+
+
+
+ 
+
+
+

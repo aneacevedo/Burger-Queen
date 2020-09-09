@@ -1,12 +1,38 @@
 import React, {useState, Fragment} from 'react';
 import menuBreakfast from '../data/menuBreakfast.json';
 
-function ShowBreakfast () {
+function ShowBreakfast (props) {
     const [MenuBreakfast ] = useState(menuBreakfast);
+    const { order, handleSetOrder} = props;
+
+    const selectFood = (item) =>{
+      const newSelect = [
+        ...order,
+        {
+          id: item.id,
+          title:item.title,
+          price: item.price,
+          total:1
+        },
+      ];
+      handleSetOrder(newSelect);
+    };
+
+    // const oli = document.querySelector('#oa');
+    // oli.addEventListener('click', (e) =>{
+    // if(e.target.checked){
+    //   console.log('check');
+    //   } else{
+    //     console.log('notchecked');
+    //   }
+    // });
+  
+
+
     return ( 
       <Fragment>
-        {MenuBreakfast.map((item, index)=> 
-                <label className="containerFood" key={index.id}>
+        {MenuBreakfast.map((item)=> 
+                <label className="containerFood" key={item.id}>
                 <div className='textImgBox'>
                    <div className='textContainer'>
                      <p>{item.title}</p>
@@ -18,7 +44,7 @@ function ShowBreakfast () {
                       src={item.img}/> */}
                     </div>
                  </div>
-                <input type='checkbox'/>
+                <input type='checkbox' id={item.id} onChange={() => selectFood(item)}/>
                 <span className='checkmark'></span>
               </label>)}
         </Fragment>

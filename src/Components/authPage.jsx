@@ -4,6 +4,7 @@ import 'firebase/auth';
 import 'firebase/firestore';
 import { useFirebaseApp } from 'reactfire';
 import BurgerToggle from './burgerToggle';
+import bqtrans from '../media/BQ-trans.png';
 
 
 function AuthPage(){
@@ -32,7 +33,7 @@ function AuthPage(){
                 <BurgerToggle/>
                 <div className='authPageContent'>
                     <div className='logoContainer'>
-                        <p>logo</p>
+                    <img src={bqtrans} className="imgLogo1" alt="logo"/>
                     </div>
                     <div className='authContainer'>
                     <form className='formCont'>

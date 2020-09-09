@@ -21,7 +21,7 @@
     text-align: center;
     background: rgb(255, 255, 255, 0.75);
     width: 100vw;
-    height: 50vh;
+    height: 55vh;
     margin-top: 25vh;
 }
 
@@ -32,6 +32,11 @@
     flex-flow: column nowrap;
     color: #204890;
     font-size: 2.5rem;
+}
+
+.imgLogo1 {
+    width: 300px;
+    margin-top: 40px;
 }
 
 .btnContent {
@@ -73,7 +78,7 @@
     text-align: center;
     align-content: center;
     width: 50vw;
-    height: 50vh;
+    height: 70vh;
     margin-top: 25vh;
     margin-bottom: 25vh;
     margin-left: 5vw;
@@ -147,8 +152,14 @@
     display: flex;
 }
 
+.imgLogo2 {
+    justify-content: center;
+    height: 200px;
+    display: flex;
+}
+
 .title {
-    margin-top: 10vh;
+    margin-top: 2vh;
     text-align: center;
     color: #48387D;
 }
@@ -309,9 +320,20 @@
     width: 0;
 }
 
-.containerFood input:checked~.checkmark {
-    padding: 100%;
+.containerFood:active {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 5px 5px 5px 5px rgba(0, 170, 223, 0.42);
+}
+
+.containerPick {
+    display: flex;
+    flex-flow: row nowrap;
+    text-align: left;
+    width: 400px;
+}
+
+.textOrder {
+    width: 100px;
+    margin-right: 10px;
 }
 
 .btnTips:hover {
@@ -521,6 +543,12 @@ handheld and (orientation: portrait) {
         width: 200px;
         height: 30px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .authPageContent {
+        width: 50vw;
+        height: 60vh;
+        margin-top: 10vh;
+        margin-bottom: 25vh;
     }
     /* sidebar */
 }
