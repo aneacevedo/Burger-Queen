@@ -20,7 +20,7 @@ class ThirdPage extends React.Component {
             <BurgerToggle/>
         <div className='thirdPageContent'>
         <img src={bqtrans} className="imgLogo2" alt="logo"/>  
-    <h1 className='title'>HI</h1>
+        <h1 className='title'>HI</h1>
             <Table/>
         </div>   
     </div>

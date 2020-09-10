@@ -6,6 +6,7 @@ import AuthPage from './Components/authPage';
 import SecondPage  from './Components/secondPage';
 import ThirdPage from './Components/thirdPage';
 import MenuPage from './Components/menu';
+import KitchenPage from './Components/kitchenPage';
 
 
 class App extends React.Component{
@@ -35,6 +36,10 @@ class App extends React.Component{
           exact
           path="/menu"
           render={ () => <MenuPage/>}/>
+          <Route
+          exact
+          path="/kitchenPage"
+          render={ () => <KitchenPage/>} />
         </Switch>
       </div>
    </BrowserRouter>

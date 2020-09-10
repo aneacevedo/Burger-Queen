@@ -18,19 +18,19 @@ class Table extends React.Component {
                 <div className="tableStyle" onClick={() => this.nextPath('/menu')}>
                 <img src={nemo} className="imgTable" alt="nemo"/>
                     Mesa Nemo</div>
-                <div className="tableStyle">
+                <div className="tableStyle" onClick={() => this.nextPath('/menu')}>
                         <img src={merida} className="imgTable" alt="merida"/>
                     Mesa Merida</div>
-                <div className="tableStyle">
+                <div className="tableStyle" onClick={() => this.nextPath('/menu')}>
                 <img src={remi} className="imgTable" alt="remi"/>
                     Mesa Remi</div>
-                <div className="tableStyle">
+                <div className="tableStyle" onClick={() => this.nextPath('/menu')}>
                 <img src={russel} className="imgTable" alt="russel"/>
                     Mesa Russel</div>
-                <div className="tableStyle">
+                <div className="tableStyle" onClick={() => this.nextPath('/menu')}>
                 <img src={arlo} className="imgTable" alt="arlo"/>
                     Mesa Arlo</div>
-                <div className="tableStyle">
+                <div className="tableStyle" onClick={() => this.nextPath('/menu')}>
                 <img src={coco} className="imgTable" alt="coco"/>
                 Mesa Coco</div>
             </div>     

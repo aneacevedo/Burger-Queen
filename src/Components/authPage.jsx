@@ -33,7 +33,7 @@ function AuthPage(){
                 <BurgerToggle/>
                 <div className='authPageContent'>
                     <div className='logoContainer'>
-                    <img src={bqtrans} className="imgLogo1" alt="logo"/>
+                    <img src={bqtrans} className="imgLogoAuth" alt="logo"/>
                     </div>
                     <div className='authContainer'>
                     <form className='formCont'>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import InitialPage from './initialPage.js';
 //import PropTypes from 'prop-types';
 import {withRouter} from 'react-router-dom';
+import bqcirc from '../media/BQ-circulo.png';
 
 class BurgerToggle extends Component {
     constructor() {
@@ -49,6 +50,7 @@ nextPath(path) {
                 ? (
 
                <div className="containerAside" key="asideView" display="none"  >
+                   <img src={bqcirc} className="imgLogo3" alt="logo"/>
                 <a className="itemMenu" href="/thirdPage"> Mesas </a>
                 <a className="itemMenu" href="/menu"> Pedidos</a>
                 <a className="itemMenu" href="/">Cambiar cuenta</a>
