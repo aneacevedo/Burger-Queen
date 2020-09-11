@@ -50,7 +50,7 @@ const SendingOrder = () => {
     console.log(productTitle);
     db.collection("orders")
     .add({
-        product: productTitle, productTotal 
+        product: productTitle, productTotal
     })
     .then(function (docRef){
         console.log("Document written with ID: ", docRef.id);
@@ -60,6 +60,11 @@ const SendingOrder = () => {
     });
 };
 
+//Eliminar pedido completo
+ const deleteAll = (id) => {
+    const filterOrder = order.filter((item) => item.id === id);
+    handleSetOrder(filterOrder);
+  };
 
     return (
         <div className='orderContainer'>
@@ -67,7 +72,7 @@ const SendingOrder = () => {
            <div className='titleAndImg'>
              <p className='titleOrder'>Pedido</p>
              <div className='imgTrashContainer'>
-               <img src={trash} className='imgTrash' alt='trash'/>
+               <img src={trash} className='imgTrash' alt='trash' onClick={() => deleteAll() }/>
              </div>
            </div>
            <div>

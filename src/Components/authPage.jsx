@@ -25,7 +25,32 @@ function AuthPage(){
     const firebase = useFirebaseApp();
 
     const submit = async () => {
-       await firebase.auth().createUserWithEmailAndPassword(email, password);
+        await firebase.auth().createUserWithEmailAndPassword(email, password)
+    //    .then((user) => {
+    //     if (user != null) {
+    //         window.location.hash = '#/thirdPage';
+    //     } else {
+    //         window.location.hash = '#/';
+    //     }
+    // })
+    // .catch(function(error) {
+    //     // Handle Errors here.
+    //     const errorCode = error.code;
+    //     const errorMessage = error.message;
+    //     switch (errorCode) {
+    //         case 'auth/invalid-email':
+    //             alert('Email incorrecto.'); // eslint-disable-line no-alert
+    //             break;
+    //         case 'auth/user-not-found':
+    //             alert('Usuario no encontrado.'); // eslint-disable-line no-alert
+    //             break;
+    //         case 'auth/wrong-password':
+    //             alert('Contraseña incorrecta.'); // eslint-disable-line no-alert
+    //             break;
+    //         default:
+    //             alert(errorMessage); // eslint-disable-line no-alert
+    //     }
+    // });
     }
     
         return(
