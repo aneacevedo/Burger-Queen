@@ -6,7 +6,7 @@ import trash from '../media/trash.png';
 function OrderList({order,  handleSetOrder}){
 
 
-    const [total, setTotal]= useState();
+    //const [total, setTotal]= useState();
     const [dataQ, setDataQ] = useState(1);
 
     function handleRemove(id){
@@ -23,7 +23,7 @@ function OrderList({order,  handleSetOrder}){
     plus += operation 
     });
 
-    const diezmo = (plus * 10)/100;
+    //const diezmo = (plus * 10)/100;
 
     function olaa(diezmo, plus){
     const yawey = diezmo + plus;
