@@ -4,11 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {FirebaseAppProvider} from 'reactfire';
-import firebaseConfig from './FirebaseReact.js';
+import {fb}  from './FirebaseReact';
 
 
 ReactDOM.render(
-  <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+  <FirebaseAppProvider firebaseConfig={fb}>
     <Suspense fallback={'Conectando'}>
      <React.StrictMode>
         <App />
