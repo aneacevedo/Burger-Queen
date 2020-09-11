@@ -83,8 +83,8 @@
     align-content: center;
     width: 50vw;
     height: 70vh;
-    margin-top: 25vh;
-    margin-bottom: 25vh;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
     margin-left: 5vw;
     margin-right: 15vw;
     background-color: rgba(255, 255, 255, 0.83);
@@ -258,10 +258,10 @@
 }
 
 .imgLogo3 {
-    width: 200px;
+    width: 180px;
     margin-top: 30px;
     margin-bottom: 60px;
-    margin-left: 30px;
+    margin-left: 3vw;
 }
 
 .boxMenuToggle {
@@ -371,8 +371,8 @@
 }
 
 .leftSideMenuPage {
-    width: 70%;
-    height: 100%;
+    width: 65vw;
+    height: 100vh;
 }
 
 .orderContainer {
@@ -381,7 +381,7 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    left: 0;
+   
 }
 
 .textOrder {
@@ -389,31 +389,33 @@
 }
 
 textarea {
-    margin-top: 20px;
-    width: 340px;
-    height: 70px;
+    margin-top: 30px;
+    width: 25vw;
+    height: auto;
     background: rgba(0, 170, 223, 0.42);
     color: rgba(0, 0, 0, 0.52);
-    font-size: 18px;
-    padding: 10px;
+    font-size: 1.8vw;
+    padding: 15px;
     border: none;
 }
 
 .containerTipsAndBtn {
-    width: 570px;
+    width: 35vw;
     background: #FFFFFF;
-    height: 570px;
+    height: 45vh;
     display: flex;
-    margin-top: 600px;
+  
     flex-direction: column;
     align-items: center;
     position: fixed;
     /* background: #FFFFFF; */
     border: 1px solid #C4C4C4;
+    bottom: 0;
+margin-bottom: 3px;
 }
 
 .titleTips {
-    font-size: 24px;
+    font-size: 2vw;
     color: #43387D;
     font-weight: bold;
     text-align: center;
@@ -421,15 +423,16 @@ textarea {
 }
 
 .btnTips {
-    margin: 10px 10px 25px 10px;
     background: #FFFFFF;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 20px;
+    font-size: 2.2vw;
     color: #AFAEB3;
     padding: 7px 5px 7px 5px;
-    width: 80px;
-    height: 35px;
+    width: 100px;
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 12px;
 }
 
 .headerMenu {
@@ -455,9 +458,9 @@ textarea {
     display: flex;
     flex-flow: row wrap;
     margin-top: 230px;
-    margin-left: 100px;
+    margin-left: 5vw;
     color: #43387D;
-    font-size: 18px;
+    font-size: 1.4vw;   
     font-weight: 600;
 }
 
@@ -503,12 +506,12 @@ textarea {
 }
 
 .totalPrice {
-    text-align: right;
     font-size: 28px;
     font-weight: bold;
     line-height: 53px;
     color: #BB0707;
-    margin-right: 100px;
+    margin-left: 280px;
+    margin-bottom: 20px;
 }
 
 .aceptBtn {
@@ -521,6 +524,7 @@ textarea {
     font-size: 24px;
     color: #FFFFFF;
     align-self: center;
+    margin-left: 50px;
 }
 
 .containerMenuLunchOthers {
@@ -590,8 +594,7 @@ textarea {
     margin: 30px 30px 30px 30px;
 }
 
-@media screen and (max-width:1024px),
-handheld and (orientation: portrait) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     /* Primera pantalla */
     /* Segunda página */
     /* Tercera Página */
@@ -604,11 +607,6 @@ handheld and (orientation: portrait) {
         height: 30px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
-    .authPageContent {
-        width: 50vw;
-        height: 60vh;
-        margin-top: 10vh;
-        margin-bottom: 25vh;
-    }
+
     /* sidebar */
 }

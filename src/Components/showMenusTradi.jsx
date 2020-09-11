@@ -113,6 +113,7 @@ function ShowMenuTradi (props) {
         </div>
       </Fragment>
       );
-}
 
+}
+ 
 export default ShowMenuTradi;
