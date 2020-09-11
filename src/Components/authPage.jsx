@@ -22,6 +22,7 @@ function AuthPage(){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    //Firebase registro
     const firebase = useFirebaseApp();
 
     const submit = async () => {

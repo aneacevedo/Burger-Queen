@@ -5,15 +5,22 @@ import trash from '../media/trash.png';
 
 function OrderList({order,  handleSetOrder}){
 
-
     //const [total, setTotal]= useState();
     const [dataQ, setDataQ] = useState(1);
 
+    //Remover productos uno a uno.
     function handleRemove(id){
         const newSum = order.filter((item) => item.id !== id);
         handleSetOrder(newSum);
     }
-
+    
+    //Eliminar pedido completo
+    const deleteAll = (id) => {
+      const filterOrder = order.filter((item) => item.id === id);
+      handleSetOrder(filterOrder);
+    };
+    
+    //Sumar los precios totales del pedido.
     const calculation = order.map((item) => 
     Math.floor(item.price)
     );
@@ -22,7 +29,8 @@ function OrderList({order,  handleSetOrder}){
     calculation.forEach(function(operation){
     plus += operation 
     });
-
+    
+//Cálculo de propina 10%
     //const diezmo = (plus * 10)/100;
 
     function olaa(diezmo, plus){
@@ -33,13 +41,15 @@ function OrderList({order,  handleSetOrder}){
 
   const handleInputChange  = (event) => { 
 
-    // console.log(event.target.value)
+   
     setDataQ({
          ...dataQ,
-        [event.target.value]: event.target.value 
+        [event.target.name]: event.target.value 
     })
-
+    console.log(event.target.value)
   }
+
+
 
 //Pedido a FB
 const db = firebase.firestore();
@@ -60,11 +70,7 @@ const SendingOrder = () => {
     });
 };
 
-//Eliminar pedido completo
- const deleteAll = (id) => {
-    const filterOrder = order.filter((item) => item.id === id);
-    handleSetOrder(filterOrder);
-  };
+
 
     return (
         <div className='orderContainer'>
@@ -82,7 +88,7 @@ const SendingOrder = () => {
                         <p className='textOrder'>{item.title}</p>
                         <p className='textOrder'>${item.price}</p>
                          <div>
-                            <input type="number" min="1" max="20" className="inputOrder" onChange={()=> handleInputChange}/> 
+                         <input type="number" min="1" max="20" name="cant" className="inputOrder" onInput={()=> handleInputChange}/>
                         </div>
                         <p className='textOrder'onClick={() => handleRemove(item.id)}>X</p>
                     </div>

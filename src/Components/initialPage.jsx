@@ -3,6 +3,7 @@ import { withRouter } from 'react-router'
 import bqtrans from '../media/BQ-trans.png';
 
 class InitialPage extends React.Component {
+    //Path para routing
     nextPath(path) {
         this.props.history.push(path);
       }

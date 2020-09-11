@@ -24,7 +24,7 @@
     },
     {
         "id": 3,
-        "img": "",
+        "img": "../media/Arlo.png",
         "title": "Doble Chicken",
         "time": "45 min",
         "price": 5400,

@@ -9,13 +9,8 @@ import bqtrans from '../media/BQ-circulo.png';
 
 
 class ThirdPage extends React.Component {
-
-
     render(){
-
-    return ( 
-
-           
+    return (    
     <div className = "thirdPageBackground">
             <BurgerToggle/>
         <div className='thirdPageContent'>

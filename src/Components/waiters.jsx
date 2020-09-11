@@ -1,9 +1,6 @@
 import React, { useState, Fragment } from 'react'
 import waiters from '../data/waiters.json'
 
-
-//export const nameContext = React.createContext(Wname);
-
 function Waiter () {
    
     const [Waiters] = useState(waiters);
