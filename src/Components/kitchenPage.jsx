@@ -1,11 +1,16 @@
 import React from 'react';
-import BurgerToggle from './burgerToggle';
-import {withRouter} from 'react-router-dom';
+import {withRouter, useHistory} from 'react-router-dom';
 
 function KitchenPage(){
+
+
+    let history = useHistory();
+    function handleClick(){
+        history.push('/');
+    }
+
     return(
         <div className="kitchen">
-            <BurgerToggle/>
             <div className="titleKitchen">
                 <h1>Hola cocineros!!!</h1>
             </div>
@@ -13,20 +18,18 @@ function KitchenPage(){
             <div className="containerWaiting">
                 <nav className="headerKitchen">En espera</nav>
                 <div className="contentWaiting">
-                    holamundo
-                    ola
-                    noseveniunaweaaaaaaaaaaaaaaa
+             
                 </div>
 
             </div>
             <div className="containerDone">
                 <nav className="headerKitchen">Listos para servir</nav>
                 <div className="contentDone">
-                    chaomundo
-                    ola
+                  
                 </div>
             </div>
             </div>
+            <button className="btnKitchen" onClick={() => handleClick()}>Cambiar de cuenta</button>
         </div>
     )
 }
