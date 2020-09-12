@@ -2,11 +2,9 @@ import React, {useState } from 'react';
 import{useHistory} from 'react-router-dom';
 import 'firebase/auth';
 import 'firebase/firestore';
-import { useFirebaseApp, useUser } from 'reactfire';
+import { useFirebaseApp } from 'reactfire';
 import BurgerToggle from './burgerToggle';
 import bqtrans from '../media/BQ-trans.png';
-
-
 
 
 function AuthPage(props){
@@ -26,8 +24,8 @@ function AuthPage(props){
 
     //Firebase registro
     const firebase = useFirebaseApp();
-    const user = useUser();
-    console.log(user)
+    //const user = useUser();
+    //console.log(user)
 
     const submit = async (e) => {
      // console.log(email, password)

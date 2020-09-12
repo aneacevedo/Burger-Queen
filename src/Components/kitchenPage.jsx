@@ -2,53 +2,39 @@ import React, {useEffect , useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import 'firebase/firestore';
 import firebase from 'firebase/app';
-
-
+import KitchenWait from './kitchenWait';
+import KitchenDone from './kitchenDone';
 
 
 function KitchenPage(){
   
     const [orders, setOrders] = useState([]);
     
-    /*useEffect(() => {
-        const obtenerDatos = async () => {
-            const db = firebase.firestore()
-            try {
-                const data = await db.collection('orders').get()
-                const arrayData = data.docs.map(doc => ({id: doc.id, ...doc.data()}))
-                console.log(arrayData);
-                setOrders(arrayData);   
-            } catch (error) {
-                console.log(error)
-            }
-        }
-        obtenerDatos();
-    }, []);*/
-
-const getOrders = async() => {
+    const getOrders = async() => {
     const db = firebase.firestore()
     db.collection('orders').onSnapshot((querySnapshot) => {
     const docs = [];
     querySnapshot.forEach((doc) => {
-    docs.push({ ...doc.data(), id: doc.id });
+    docs.push({ ...doc.data(), id: doc.id});
     });
-    console.log(docs)
     setOrders(docs);  
-})
-};
+    });
+    };
        
- useEffect(() => {
+    useEffect(() => {
         //(console.log('oka')
- getOrders();
-},[])
+    getOrders();
+    },[])
     
     let history = useHistory();
     function handleClick(){
         history.push('/');
     }
-
+    const handleSetOrders= (order) =>{
+        setOrders(orders);
+      }
+    
     return(
-        
         <div className="kitchen">
             <div className="titleKitchen">
                 <h1>Hola cocineros!!!</h1>
@@ -56,20 +42,16 @@ const getOrders = async() => {
             <div className="contentKitchen">
            
             <div className="containerWaiting">
-                <nav className="headerKitchen">En espera</nav>
+                <div className="headerKitchen">
+                    <h3>En espera</h3></div>
                 <div className="contentWaiting">
-                { orders.map((item) => (
-                    <div key={item.id}>
-                                <li>{item[0]}</li>
-                            </div>
-                    ))}
-                   
+                <KitchenWait orders={orders} handleSetOrders={handleSetOrders}/>
                 </div>
             </div>
             <div className="containerDone">
-                <nav className="headerKitchen">Listos para servir</nav>
+                <nav className="headerKitchen1">Listos para servir</nav>
                 <div className="contentDone">
-                  
+                  <KitchenDone orders={orders}/>
                 </div>
             </div>
             </div>

@@ -13,6 +13,7 @@ function ShowBreakfast (props) {
           title:item.title,
           price: item.price,
           total:1
+         
         },
       ];
       handleSetOrder(newSelect);
@@ -27,9 +28,11 @@ function ShowBreakfast (props) {
                      <p>{item.title}</p>
                      <p>{item.time}</p>
                      <p>${item.price}</p>
+                     
                     </div>
                     <div className='containerImgFood'>
-                      <img className='imgFood' src="../media/burger-doble-pollo.jpg" alt="pollodoble"/>
+                    <img src={item.img} alt="imagen"/>
+                      
                     </div>
                  </div>
                 <input type='checkbox' id={item.id} onChange={() => selectFood(item)}/>
