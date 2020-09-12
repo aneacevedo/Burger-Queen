@@ -37,8 +37,7 @@ function ShowMenuTradi (props) {
              <p>${item.price}</p>
             </div>
             <div className='containerImgFood'>
-              <img className='imgFood' 
-              src={item.img}/>
+              <img className='imgFood' alt=""/>
             </div>
          </div>
         <input key={item.id} type='checkbox' onChange={() => selectFood(item)}/>
@@ -58,7 +57,7 @@ function ShowMenuTradi (props) {
                       </div>
                       <div className='containerImgFood'>
                         <img className='imgFood' 
-                        src={item.img}/>
+                        src={item.img} alt=""/>
                       </div>
                    </div>
                   <input key={item.id} type='checkbox' onChange={() => selectFood(item)} />
@@ -80,7 +79,7 @@ function ShowMenuTradi (props) {
                     </div>
                     <div className='containerImgFood'>
                       <img className='imgFood' 
-                      src={item.img}/>
+                      src={item.img} alt=""/>
                     </div>
                  </div>
                 <input key={item.id} type='checkbox' onChange={() => selectFood(item) }/>
@@ -102,7 +101,7 @@ function ShowMenuTradi (props) {
                  </div>
                  <div className='containerImgFood'>
                    <img className='imgFood' 
-                   src={item.img}/>
+                   src={item.img} alt=""/>
                  </div>
               </div>
              <input key={item.id}type='checkbox' onChange={() => selectFood(item)}/>

@@ -3,7 +3,10 @@ import React, { Component } from 'react';
 //import PropTypes from 'prop-types';
 import {withRouter} from 'react-router-dom';
 import bqcirc from '../media/BQ-circulo.png';
-
+import 'firebase/auth';
+import 'firebase/firestore';
+// import { useFirebaseApp} from 'reactfire';
+// const firebase = useFirebaseApp();
 class BurgerToggle extends Component {
     constructor() {
         super();
@@ -12,35 +15,41 @@ class BurgerToggle extends Component {
         }
         this.showMenu = this.showMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
+
     }
+
+
+
+
+
     showMenu(e){
         e.preventDefault();
 
         this.setState({ showMenu : true}, () =>{
-            document.addEventListener('click', this.closeMenu); 
+            document.addEventListener('click', this.closeMenu);
         });
     }
 
     closeMenu(event) {
         if (!event.target.closest('.menu')) {
-          
+
           this.setState({ showMenu: false }, () => {
             document.removeEventListener('click', this.closeMenu);
-          });  
-          
+          });
+
         }
       }
 nextPath(path) {
     this.props.history.push(path);
   }
-    render() {  
-         
-        return ( 
+    render() {
+
+        return (
             <div className='sideBar'
             ref={(element)=> {
                 this.dropdownMenu = element;
             }}>
-            
+
                     <button className="toggle" onClick = {this.showMenu}>
                     &#9776;
                     </button>
@@ -54,6 +63,7 @@ nextPath(path) {
                 <a className="itemMenu" href="/thirdPage"> Mesas </a>
                 <a className="itemMenu" href="/menu"> Pedidos</a>
                 <a className="itemMenu" href="/">Cambiar cuenta</a>
+
                </div>
 
                 )
@@ -69,3 +79,8 @@ nextPath(path) {
 
 export default withRouter(BurgerToggle);
 
+// no funciono
+
+// <input type="button" onClick={ async () => {
+//     await firebase.auth().signOut();
+// }} />

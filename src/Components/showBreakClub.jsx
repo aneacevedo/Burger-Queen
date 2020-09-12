@@ -29,8 +29,7 @@ function ShowBreakfast (props) {
                      <p>${item.price}</p>
                     </div>
                     <div className='containerImgFood'>
-                      <img className='imgFood' 
-                      src={item.img}/>
+                      <img className='imgFood' src="../media/burger-doble-pollo.jpg" alt="pollodoble"/>
                     </div>
                  </div>
                 <input type='checkbox' id={item.id} onChange={() => selectFood(item)}/>
