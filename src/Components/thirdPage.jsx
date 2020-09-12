@@ -4,18 +4,18 @@ import Table from './table';
 import BurgerToggle from './burgerToggle';
 import { withRouter } from 'react-router'
 import bqtrans from '../media/BQ-circulo.png';
+import {useUser} from 'reactfire';
 
 
 
-
-class ThirdPage extends React.Component {
-    render(){
+function ThirdPage (props) {
+        const user =useUser();
     return (    
     <div className = "thirdPageBackground">
             <BurgerToggle/>
         <div className='thirdPageContent'>
         <img src={bqtrans} className="imgLogo2" alt="logo"/>  
-        <h1 className='title'>HI</h1>
+    {user && <h1 className='title'>Hola {user.email}</h1>}
             <Table/>
         </div>   
     </div>
@@ -24,6 +24,6 @@ class ThirdPage extends React.Component {
    
     );
     }
-}
+
 
 export default withRouter(ThirdPage);

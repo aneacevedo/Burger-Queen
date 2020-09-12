@@ -5,7 +5,7 @@ import trash from '../media/trash.png';
 
 function OrderList({order,  handleSetOrder}){
 
-    //const [total, setTotal]= useState();
+    //const [total, setTotal]= useState('');
     const [dataQ, setDataQ] = useState(1);
 
     //Remover productos uno a uno.
@@ -24,12 +24,14 @@ function OrderList({order,  handleSetOrder}){
     const calculation = order.map((item) => 
     Math.floor(item.price)
     );
-
+    
     let plus = 0;
     calculation.forEach(function(operation){
     plus += operation 
     });
     
+   
+
 //Cálculo de propina 10%
     //const diezmo = (plus * 10)/100;
 
@@ -37,17 +39,13 @@ function OrderList({order,  handleSetOrder}){
     const yawey = diezmo + plus;
         return (yawey);
     }
-
-
-  const handleInputChange  = (event) => { 
-
-   
-    setDataQ({
-         ...dataQ,
-        [event.target.name]: event.target.value 
-    })
-    console.log(event.target.value)
-  }
+const handleInputChange  = (event) => { 
+setDataQ({
+    ...dataQ,
+      [event.target.name]: event.target.value 
+})
+console.log(event.target.value)
+}
 
 
 
@@ -88,7 +86,8 @@ const SendingOrder = () => {
                         <p className='textOrder'>{item.title}</p>
                         <p className='textOrder'>${item.price}</p>
                          <div>
-                         <input type="number" min="1" max="20" name="cant" className="inputOrder" onInput={()=> handleInputChange}/>
+                    
+                          <input type="number" min="1" max="20" name="cant" className="inputOrder" onInput={()=> handleInputChange}/> 
                         </div>
                         <p className='textOrder'onClick={() => handleRemove(item.id)}>X</p>
                     </div>

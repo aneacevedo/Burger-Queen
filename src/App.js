@@ -7,15 +7,18 @@ import SecondPage  from './Components/secondPage';
 import ThirdPage from './Components/thirdPage';
 import MenuPage from './Components/menu';
 import KitchenPage from './Components/kitchenPage';
+import {useFirebaseApp} from 'reactfire';
 
-
-class App extends React.Component{
-  render(){
+function App() {
+  const firebase = useFirebaseApp();
+  console.log(firebase);
+ 
   return (
+    // <AuthProvider>
     <BrowserRouter>
       <div>
         <Switch>     
-          <Route 
+          <Route
             exact
             path="/"
             component={InitialPage} 
@@ -43,7 +46,10 @@ class App extends React.Component{
         </Switch>
       </div>
    </BrowserRouter>
+
+
+
    )};
-}
+
 
 export default App;
