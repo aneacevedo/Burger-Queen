@@ -7,6 +7,18 @@ function OrderList({order,  handleSetOrder}){
 
     //const [total, setTotal]= useState('');
     const [dataQ, setDataQ] = useState(1);
+    const [note, setNote] = useState({
+    note:''});
+    
+
+    const notesSave =(e) => {
+      console.log(e.target.value)
+      setNote({
+          ...note,
+          [e.target.name] : e.target.value
+      })
+
+  }
 
     //Remover productos uno a uno.
     function handleRemove(id){
@@ -30,22 +42,22 @@ function OrderList({order,  handleSetOrder}){
     plus += operation 
     });
     
-   
 
 //Cálculo de propina 10%
     //const diezmo = (plus * 10)/100;
 
-    function olaa(diezmo, plus){
-    const yawey = diezmo + plus;
-        return (yawey);
-    }
+    // function tips(diezmo, plus){
+    // const yawey = diezmo + plus;
+    //     return (yawey); 
+    // }
+
 const handleInputChange  = (event) => { 
 setDataQ({
     ...dataQ,
       [event.target.name]: event.target.value 
 })
 console.log(event.target.value)
-}
+ }
 
 
 
@@ -53,12 +65,18 @@ console.log(event.target.value)
 const db = firebase.firestore();
 // enviar orden a cd firestore
 const SendingOrder = () => {
+   
     const productTitle = order.map((item) => item.title);
-    const productTotal = order.map((item) => item.total.value);
+    const timeOrder = new Date();
+    //const productTotal = order.map((item) => item.total);
+  
     console.log(productTitle);
     db.collection("orders")
     .add({
-        product: productTitle, productTotal
+        product: productTitle,
+        //note: note,
+        time: timeOrder.toLocaleString([], {timeStyle: 'short'}),
+       
     })
     .then(function (docRef){
         console.log("Document written with ID: ", docRef.id);
@@ -66,6 +84,13 @@ const SendingOrder = () => {
     .catch(function (error) {
         console.error("Error adding document: ", error)
     });
+    
+};
+
+//Eliminar el pedido al enviarlo
+function sendOrders(){
+    SendingOrder();
+    deleteAll();
 };
 
 
@@ -85,25 +110,29 @@ const SendingOrder = () => {
                     <div className="containerPick" key={item.id} item={item}>
                         <p className='textOrder'>{item.title}</p>
                         <p className='textOrder'>${item.price}</p>
+                       
                          <div>
                     
-                          <input type="number" min="1" max="20" name="cant" className="inputOrder" onInput={()=> handleInputChange}/> 
+                          <input type="number" min="1" max="20" name="cant" className="inputOrder" onInput={()=> handleInputChange}/>
                         </div>
                         <p className='textOrder'onClick={() => handleRemove(item.id)}>X</p>
                     </div>
                 )}
              </div>
         <div className='containerTipsAndBtn'>
+         
           <div>
-            <textarea placeholder='Añadir notas al chef'></textarea>
+          <form onSubmit={notesSave}>
+            <textarea name="note" placeholder='Añadir notas al chef' onChange={ (e) => setNote(e.target.value) }></textarea>
+            </form>
           </div>
-          <div className='containerTips'>
+          {/* <div className='containerTips'>
             <p className='titleTips'>Propina</p>
-                <button className='btnTips' onClick={() => olaa()}>10%</button>
-          </div>
+                <button className='btnTips' onClick={() => tips()}>10%</button>
+          </div> */}
           <div className='containerPriceBtn'>
                 <p className='totalPrice'>Total ${plus}</p>
-            <button className='aceptBtn' onClick={() => SendingOrder()}>CONFIRMAR PEDIDO</button>
+            <button type="submit" className='aceptBtn' onClick={() => sendOrders()}>CONFIRMAR PEDIDO</button>
           </div>
          </div>
            </div>  

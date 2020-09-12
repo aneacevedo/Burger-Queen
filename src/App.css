@@ -230,7 +230,8 @@
     position: relative;
 }
 
-.tMenu:hover, .btnKitchen:hover {
+.tMenu:hover,
+.btnKitchen:hover {
     cursor: pointer;
     background: #00AADF;
     color: white;
@@ -343,7 +344,7 @@
     flex-flow: row nowrap;
     text-align: left;
     width: 560px;
-    height: 80px;
+    min-height: 80px;
     border: 1px solid #C4C4C4;
     padding: 5px;
     font-size: 1.5vw;
@@ -388,14 +389,14 @@
 .textOrder {
     width: 100%;
 }
-.inputOrder{
+
+.inputOrder {
     height: 30px;
-    padding-top:3px;
+    padding-top: 3px;
     margin-top: 15px;
     font-size: 20px;
     width: 100px;
     margin-right: 25px;
-
 }
 
 textarea {
@@ -412,7 +413,7 @@ textarea {
 .containerTipsAndBtn {
     width: 35vw;
     background: #FFFFFF;
-    height: 45vh;
+    height: 36vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -480,7 +481,7 @@ textarea {
     color: #43387D;
     margin-bottom: 38px;
     margin-right: 20px;
-    margin-left: 120px;
+    margin-left: 155px;
 }
 
 .titleAndImg {
@@ -491,7 +492,6 @@ textarea {
     width: 100%;
     background-color: #F8F8F8;
     height: 15vh;
-    margin-left: 3vw;
 }
 
 .orderPicksContainer {
@@ -499,7 +499,7 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 450px;
+    height: 505px;
     position: fixed;
     overflow: scroll;
     background-color: #E5F7FC;
@@ -575,11 +575,25 @@ textarea {
 .contentKitchen {
     display: flex;
     flex-direction: row;
- 
 }
 
-.containerWaiting,
 .containerDone {
+    display: flex;
+    flex-direction: column;
+    height: 670px;
+    width: 640px;
+    background-color: #F1F1F1;
+    border: 0.5px solid #9E9B9B;
+    box-sizing: border-box;
+    border-radius: 5px;
+    right: 0;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    margin: 30px 30px 30px 30px;
+    margin-left: 690px;
+}
+
+.containerWaiting {
     display: flex;
     flex-direction: column;
     height: 670px;
@@ -589,6 +603,11 @@ textarea {
     border: 0.5px solid #9E9B9B;
     box-sizing: border-box;
     border-radius: 5px;
+    position: fixed;
+    left: 0;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    margin: 30px 30px 30px 30px;
 }
 
 .headerKitchen {
@@ -599,29 +618,57 @@ textarea {
     color: white;
     font-size: 28px;
     font-weight: 600;
+    position: fixed;
+    width: 640px;
 }
 
-.contentWaiting,
-.contentDone {
-    margin: 30px 30px 30px 30px;
+.headerKitchen1 {
+    background-color: #00AADF;
+    height: 27px;
+    text-align: center;
+    padding: 24px 100px 24px 100px;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    position: fixed;
+    width: 640px;
 }
-.titleKitchen{
+
+.titleKitchen {
     margin: 80px 0px 80px 0px;
     display: flex;
     flex-direction: row;
     align-items: baseline;
 }
 
-.btnKitchen{
+.btnKitchen {
     padding: 10px 20px 10px 20px;
-    font-size:22px;
+    font-size: 22px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 3px;
     align-self: flex-end;
-    margin:50px 40px 0px 0px;
+    margin: 50px 40px 0px 0px;
 }
 
+.ordersKitchen,
+.ordersKitchenDone {
+    background-color: #DFBE11;
+    color: white;
+    margin-bottom: 30px;
+    width: 500px;
+    padding: 28px 20px 27px 40px;
+    height: auto;
+    border-radius: 10px;
+    font-size: 18px;
+    overflow: scroll;
+    margin-left: 35px;
+    margin-top: 35px;
+}
+
+.ordersKitchenDone {
+    background-color: #49A220;
+}
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     /* Primera pantalla */

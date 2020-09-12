@@ -24,7 +24,7 @@ function MenuPage() {
         <header className='headerMenu'>
         <BurgerToggle/> 
          <div className='tableAndName'>
-           <p className='titleM'>Nombredemesa</p>
+           <p className='titleM'>Nombre:</p>
            <input type='text' className='nameComensal' placeholder='Ingresar nombre'/>
            <div className='containerBtnsMenus'>
              <button className='tMenu' onClick={clickShowMenu}>Menú Tradicional</button>
