@@ -19,7 +19,7 @@
 ## 1. Burger Kingdom. :speech_balloon:
 
 
-Burger Kingdom web app, ha sido creada a partir de la idea de facilitar a meseros y cocineros ta tarea de coordinación de pedidos.
+Burger Kingdom web app, ha sido creada a partir de la idea de facilitar a meseros y cocineros la tarea de coordinación de pedidos.
 Nuestro proyecto está inspirado directamente en el universo "Disney Pixar", trasladándonos a un local temático, motivo que la aplicación acompaña con imágenes de personajes y referencias a películas emblemáticas del estudio.
 La idea de fondo es que la app cuenta con una usabilidad adecuada para todos los trabajadores del local, así evitar errores y mejorar los tiempos de procesos. 
 Éste proyecto ha sido desarrollado con React js.

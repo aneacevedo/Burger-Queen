@@ -30,7 +30,7 @@ function KitchenPage(){
     function handleClick(){
         history.push('/');
     }
-    const handleSetOrders= (order) =>{
+    const handleSetOrders= (orders) =>{
         setOrders(orders);
       }
     
