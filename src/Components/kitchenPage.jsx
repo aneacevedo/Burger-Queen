@@ -49,7 +49,9 @@ function KitchenPage(){
                 </div>
             </div>
             <div className="containerDone">
-                <nav className="headerKitchen1">Listos para servir</nav>
+                <div className="headerKitchen1">
+                    <h3>Listos para servir</h3>
+                </div>
                 <div className="contentDone">
                   <KitchenDone orders={orders}/>
                 </div>
