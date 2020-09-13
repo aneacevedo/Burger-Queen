@@ -132,8 +132,8 @@ En éste proyecto se nos fue proporcionada una lista de objetivos de aprendizaje
 ## 7. Despliegue 📦
 
 Puedes acceder al deploy de nuestro proyecto [aquí](https://burguer-queen-50550.web.app).
-
 Posterior al despliegue hicimos puntuación de performance por medio de Lighthouse de Google, obteniendo todas las puntuaciones por sobre 80% como se nos solicitó.
+
 ![LightHouse](src/media/lighthouse.png)
 
 ## 8. Herramientas 🛠️
