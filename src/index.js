@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { Suspense }  from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {FirebaseAppProvider} from 'reactfire';
+import firebaseConfig from './FirebaseReact'
+import './FirebaseReact'; 
 
-ReactDOM.render(
+
+
+
+
+ReactDOM.render((
+  <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+    <Suspense fallback={'Conectando con las App...'}>
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
+  </Suspense>
+  </FirebaseAppProvider>)
+  ,document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

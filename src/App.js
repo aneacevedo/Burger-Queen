@@ -1,26 +1,55 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
+import InitialPage from './Components/initialPage';
+import AuthPage from './Components/authPage';
+import SecondPage  from './Components/secondPage';
+import ThirdPage from './Components/thirdPage';
+import MenuPage from './Components/menu';
+import KitchenPage from './Components/kitchenPage';
+import {useFirebaseApp} from 'reactfire';
 
 function App() {
+  const firebase = useFirebaseApp();
+  console.log(firebase);
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    // <AuthProvider>
+    <BrowserRouter>
+      <div>
+        <Switch>     
+          <Route
+            exact
+            path="/"
+            component={InitialPage} 
+          />
+           <Route
+          exact
+          path="/authPage"
+          render={ () => <AuthPage/>} />
+          <Route
+          exact
+          path="/secondPage"
+          render={ () => <SecondPage/>} />
+           <Route
+          exact
+          path="/thirdPage"
+          render={ () => <ThirdPage/>} />
+           <Route
+          exact
+          path="/menu"
+          render={ () => <MenuPage/>}/>
+          <Route
+          exact
+          path="/kitchenPage"
+          render={ () => <KitchenPage/>} />
+        </Switch>
+      </div>
+   </BrowserRouter>
+
+
+
+   )};
+
 
 export default App;

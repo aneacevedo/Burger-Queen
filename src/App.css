@@ -1,38 +1,687 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Primera pantalla */
+
+.initialPageBackground {
+    background: url('./media/backUp.png');
+    position: fixed;
+    background-size: cover;
+    height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.initialPageCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgb(255, 255, 255, 0.85);
+    width: 100vw;
+    height: 55vh;
+    margin-top: 25vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.initialPageContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    color: #204890;
+    font-size: 2.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.imgLogo1 {
+    width: 300px;
+    margin-top: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.imgLogoAuth {
+    width: 300px;
+}
+
+.btnContent {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.btnInitialPage {
+    margin: 50px;
+    width: 220px;
+    height: 70px;
+    font-size: 2rem;
+    color: white;
+    background: rgb(0, 170, 223);
+    background-image: linear-gradient(to bottom, #00aadf, #118ecd, #2a71b6, #3a559b, #43387d);
+    border: none;
+    border-radius: 8px;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/* Segunda página */
+
+.authPageBackground {
+    /* align-items: center; */
+    background: url('./media/ratatouille.png') no-repeat;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    display: flex;
+}
+
+.authPageContent {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    align-content: center;
+    width: 50vw;
+    height: 70vh;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    margin-left: 5vw;
+    margin-right: 15vw;
+    background-color: rgba(255, 255, 255, 0.83);
+    font-size: 2.5rem;
+    color: #00AADF;
+    z-index: 5;
+    justify-content: center;
+}
+
+.authContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formCont {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+}
+
+.inputAuth {
+    padding: 10px;
+    margin: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* .selectNames {
+    background-color: #00AADF;
+    border: 2px solid #00AADF;
+    width: 50%;
+    font-size: 1.5rem;
+    padding: 2px;
+    text-align: center;
+    margin-top: 10%;
+    color: white;
+    margin-bottom: 2%;
+} */
+
+.btnAuthPage {
+    align-self: center;
+    margin-top: 20px;
+    width: 220px;
+    height: 50px;
+    font-size: 1.8rem;
+    color: white;
+    background: rgb(0, 170, 223);
+    background-image: linear-gradient(to bottom, #00aadf, #118ecd, #2a71b6, #3a559b, #43387d);
+    border: none;
+    border-radius: 8px;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/* Tercera Página */
+
+.thirdPageBackground {
+    background: url('./media/castillo.png') no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.imgLogo2 {
+    justify-content: center;
+    height: 200px;
+    display: flex;
+}
+
+.title {
+    margin-top: 2vh;
+    text-align: center;
+    color: #48387D;
+}
+
+.titleM {
+    font-size: 36px;
+    color: #43387D;
+    margin-right: 35px;
+    align-content: center;
+    display: flex;
+}
+
+.contentTables {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10vh;
+    justify-content: center;
+    margin-right: 10vw;
+}
+
+.tableStyle {
+    background: #00AADF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    width: 20vw;
+    height: 15vh;
+    margin: 30px 30px 30px 30px;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 5vh;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.imgTable {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Menú */
+
+.nameComensal {
+    border: none;
+    color: #00AADF;
+    font-size: 20px;
+    width: 270px;
+    height: 30px;
+    background: rgba(0, 170, 223, 0.42);
+    text-align: center;
+    padding: 2px;
+    color: rgba(0, 0, 0, 0.52);
+}
+
+.tMenu {
+    width: 227px;
+    height: 40px;
+    font-size: 22px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-right: 80px;
+    background: #E5E5E5;
+    border: none;
+    color: #2B2B2B;
+    line-height: 28px;
+    position: relative;
+}
+
+.tMenu:hover,
+.btnKitchen:hover {
+    cursor: pointer;
+    background: #00AADF;
+    color: white;
+}
+
+
+/* sidebar */
+
+.containerAside {
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background-image: linear-gradient(to bottom, #00aadf, #118ecd, #2a71b6, #3a559b, #43387d);
+    border-radius: 5px;
+    transition: all 0.75s ease-in-out;
+    z-index: 3;
+}
+
+.sideBar {
+    font-size: 4rem;
+    text-align: center;
+    transition: all 0.75s ease-in-out;
+    z-index: 3;
+}
+
+.imgLogo3 {
+    width: 180px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    margin-left: 3vw;
+}
+
+.boxMenuToggle {
+    width: 20vw;
+    height: 100vh;
+    z-index: 5;
+}
+
+.itemMenu {
+    width: 100%;
+    height: 15vh;
+    text-align: center;
+    color: #FFFFFF;
+    border-style: none;
+    text-decoration: none;
+    font-size: 2vw;
+}
+
+.toggle {
+    text-align: center;
+    font-size: 40px;
+    background-color: white;
+    border: 2px solid #00AADF;
+    border-radius: 5px;
+    color: #00AADF;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    padding-bottom: 0.5vw;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 3vw;
+    margin-top: 40px;
+    margin-right: 130px;
+    margin-bottom: 5px;
+}
+
+.containerBtnsMenus {
+    margin-top: 82px;
+    margin-left: -550px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.containerMenuPage {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.containerFood {
+    width: 310px;
+    height: 150px;
+    background: #FFFFFF;
+    border: 0.5px solid #C4C4C4;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 44px;
+    margin-right: 80px;
+    padding: 12px 166px 75px 17px;
+    line-height: 1.9em;
+    cursor: pointer;
+}
+
+.containerFood input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.containerFood:active {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 5px 5px 5px 5px rgba(0, 170, 223, 0.42);
+}
+
+.containerPick {
+    display: flex;
+    flex-flow: row nowrap;
+    text-align: left;
+    width: 560px;
+    min-height: 80px;
+    border: 1px solid #C4C4C4;
+    padding: 5px;
+    font-size: 1.5vw;
+    justify-content: space-between;
+    color: #43387D;
+    font-weight: bold;
+}
+
+.textOrder {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.btnTips:hover {
+    color: #7a7a7a;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 4px 4px 4px rgba(0, 170, 223, 0.42)
+}
+
+.textImgBox {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 155px;
+}
+
+.textContainer {
+    width: 155px;
+}
+
+.leftSideMenuPage {
+    width: 65vw;
+    height: 100vh;
+}
+
+.orderContainer {
+    width: 35vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.textOrder {
+    width: 100%;
+}
+
+.inputOrder {
+    height: 30px;
+    padding-top: 3px;
+    margin-top: 15px;
+    font-size: 20px;
+    width: 100px;
+    margin-right: 25px;
+}
+
+textarea {
+    margin-top: 30px;
+    width: 25vw;
+    height: auto;
+    background: rgba(0, 170, 223, 0.42);
+    color: rgba(0, 0, 0, 0.52);
+    font-size: 1.8vw;
+    padding: 15px;
+    border: none;
+}
+
+.containerTipsAndBtn {
+    width: 35vw;
+    background: #FFFFFF;
+    height: 36vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    /* background: #FFFFFF; */
+    border: 1px solid #C4C4C4;
+    bottom: 0;
+    margin-bottom: 3px;
+}
+
+.titleTips {
+    font-size: 2vw;
+    color: #43387D;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btnTips {
+    background: #FFFFFF;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 2.2vw;
+    color: #AFAEB3;
+    padding: 7px 5px 7px 5px;
+    width: 100px;
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.headerMenu {
+    width: 68%;
+    height: 150px;
+    position: fixed;
+    background-color: #FFFFFF;
+    display: flex;
+    /* flex-flow: column nowrap; */
+    /* align-items: center; */
+    padding: 40px 0px 20px 0px;
+}
+
+.tableAndName {
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    margin-bottom: -150px;
+    margin-right: 100px;
+}
+
+.containerShowMenu {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 230px;
+    margin-left: 5vw;
+    color: #43387D;
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+
+.titleOrder {
+    font-size: 42px;
+    line-height: 56px;
+    color: #43387D;
+    margin-bottom: 38px;
+    margin-right: 20px;
+    margin-left: 155px;
+}
+
+.titleAndImg {
+    display: flex;
+    flex-flow: row nowrap;
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    background-color: #F8F8F8;
+    height: 15vh;
+}
+
+.orderPicksContainer {
+    margin-top: 145px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 505px;
+    position: fixed;
+    overflow: scroll;
+    background-color: #E5F7FC;
+    scroll-behavior: smooth;
+}
+
+.containerPriceBtn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 50px;
+    margin-top: 32px;
+}
+
+.totalPrice {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 53px;
+    color: #BB0707;
+    margin-left: 280px;
+    margin-bottom: 20px;
+}
+
+.aceptBtn {
+    background: #00AADF;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 350px;
+    height: 70px;
+    font-weight: bolder;
+    font-size: 24px;
+    color: #FFFFFF;
+    align-self: center;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.containerMenuLunchOthers {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.containerTextMenuPage {
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    width: 250px;
+    height: 35px;
+    padding: 3px 1px 4px 15px;
+    font-size: 20px;
+    margin: 10px 0px 25px 0px;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+}
+
+.imgTrashContainer {
+    width: 35px;
+    height: 35px;
+    margin: 0px 0px 35px 6px;
+}
+
+.imgTrash {
+    width: 100%;
+    cursor: pointer;
+}
+
+.kitchen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contentKitchen {
+    display: flex;
+    flex-direction: row;
+}
+
+.containerDone {
+    display: flex;
+    flex-direction: column;
+    height: 670px;
+    width: 640px;
+    background-color: #F1F1F1;
+    border: 0.5px solid #9E9B9B;
+    box-sizing: border-box;
+    border-radius: 5px;
+    right: 0;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    margin: 30px 30px 30px 30px;
+    margin-left: 690px;
+}
+
+.containerWaiting {
+    display: flex;
+    flex-direction: column;
+    height: 670px;
+    width: 640px;
+    margin-right: 20px;
+    background-color: #F1F1F1;
+    border: 0.5px solid #9E9B9B;
+    box-sizing: border-box;
+    border-radius: 5px;
+    position: fixed;
+    left: 0;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    margin: 30px 30px 30px 30px;
+}
+
+.headerKitchen {
+    background-color: #00AADF;
+    height: 27px;
+    text-align: center;
+    padding: 24px 100px 24px 100px;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    position: fixed;
+    width: 640px;
+}
+
+.headerKitchen1 {
+    background-color: #00AADF;
+    height: 27px;
+    text-align: center;
+    padding: 24px 100px 24px 100px;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    position: fixed;
+    width: 640px;
+}
+
+.titleKitchen {
+    margin: 80px 0px 80px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.btnKitchen {
+    padding: 10px 20px 10px 20px;
+    font-size: 22px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    align-self: flex-end;
+    margin: 50px 40px 0px 0px;
+}
+
+.ordersKitchen,
+.ordersKitchenDone {
+    background-color: #DFBE11;
+    color: white;
+    margin-bottom: 30px;
+    width: 500px;
+    padding: 28px 20px 27px 40px;
+    height: auto;
+    border-radius: 10px;
+    font-size: 18px;
+    overflow: scroll;
+    margin-left: 35px;
+    margin-top: 35px;
+}
+
+.ordersKitchenDone {
+    background-color: #49A220;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Primera pantalla */
+    /* Segunda página */
+    /* Tercera Página */
+    /* Menú */
+    .nameComensal {
+        font-size: 14px;
+    }
+    .tMenu {
+        width: 200px;
+        height: 30px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    /* sidebar */
 }
