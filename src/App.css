@@ -356,6 +356,7 @@
 .textOrder {
     width: 100px;
     margin-right: 10px;
+    padding-top: 15px;
 }
 
 .btnTips:hover {
@@ -612,14 +613,14 @@ textarea {
 
 .headerKitchen {
     background-color: #00AADF;
-    height: 27px;
-    text-align: center;
-    padding: 24px 100px 24px 100px;
-    color: white;
-    font-size: 28px;
-    font-weight: 600;
-    position: fixed;
-    width: 640px;
+height: 27px;
+text-align: center;
+padding: 24px 100px 24px 100px;
+color: white;
+font-size: 28px;
+font-weight: 600;
+position: fixed;
+width: 440px;
 }
 
 .headerKitchen1 {
@@ -631,7 +632,7 @@ textarea {
     font-size: 28px;
     font-weight: 600;
     position: fixed;
-    width: 640px;
+    width: 440px;
 }
 
 .titleKitchen {
@@ -664,6 +665,7 @@ textarea {
     overflow: scroll;
     margin-left: 35px;
     margin-top: 35px;
+    margin-top: 145px;
 }
 
 .ordersKitchenDone {
