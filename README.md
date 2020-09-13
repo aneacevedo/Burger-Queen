@@ -31,7 +31,7 @@ Burger kingdom es una SPA (Single Page Aplication) pensada y desarrollada para s
 En la primera pantalla podemos seleccionar si entraremos a la app como meseros o como cocineros, porterior a eso, se solicita un inicio de sesión para acceder a todo el contenido (selección de mesas, menú y realización del pedido.).
 Puedes acceder a la sección de meseros con el correo electrónico hola@gmail.com y la contraseña 123456 para probarla.
 
-![App](src/media/cp1.png) ![App](src/media/cp3.png)
+![App](src/media/cp2.png) ![App](src/media/cp3.png)
 
 ## 3. Proceso de prototipado 📋
 
@@ -145,7 +145,7 @@ Las herramientas usadas fueron:
 * [Trello](https://trello.com/) – Para la planificación.
 * [Firebase](https://firebase.google.com/) – Para la autenticación, base de datos y hosting.
 * [Git y GitHub](https://github.com/) – Para el trabajo colaborativo.
-+ [Lighthouse](https://developers.google.com/web/tools/lighthouse?hl=es) – Para las puntuaciones de Performance.
+* [Lighthouse](https://developers.google.com/web/tools/lighthouse?hl=es) – Para las puntuaciones de Performance.
 
 ## 9. Autoras ✒️
 
